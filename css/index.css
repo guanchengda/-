@@ -1,0 +1,61 @@
+/* 头部轮播背景图 */
+.header .lb_images {
+  width: 1920px;
+  height: 901px;
+  /* background: url(../images/lb_bg01.jpg) no-repeat; */
+}
+
+.lb_images {
+  /* position: absolute; */
+  /* z-index: 1; */
+}
+
+/* 头部栏 */
+.header {
+  width: 1920px;
+  height: 48px;
+  background: rgba(0, 0, 0, .6);
+  /* background: red; */
+  /* 定位 */
+  /* position: relative; */
+  /* z-index: 5; */
+
+}
+
+/* 故宫Logo */
+/* logo图的尺寸 */
+.toplogo img {
+  width: 115px;
+  height: 36.5px;
+
+}
+
+/* logo盒子 */
+.toplogo {
+  float: left;
+  /* text-align: center; */
+
+  margin-left: 30px;
+}
+
+/* 首页等nav */
+.topnav_mean {
+
+  width: 1210px;
+  height: 100%;
+  line-height: 48px;
+  padding: 0 520px;
+
+}
+
+.topnav_mean li {
+  float: left;
+  width: 106px;
+  height: 48px;
+  font-size: 18px;
+
+}
+
+li a {
+  color: #fff;
+}
