@@ -1,61 +1,205 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* height: 2666px; */
+  line-height: 1.5;
+  font-family: 微软雅黑, 'Heiti SC', 黑体, Arial;
+}
+
+
+
+/* ACTION */
+/* 1、头部与轮播区域样式 */
 /* 头部轮播背景图 */
 .header .lb_images {
-  width: 1920px;
-  height: 901px;
-  /* background: url(../images/lb_bg01.jpg) no-repeat; */
+  width: 100%;
+  /* height: 100%; */
+
+  /* 高度刚好为到轮播图 */
+  height: 979px;
+  position: relative;
 }
 
 .lb_images {
   /* position: absolute; */
-  /* z-index: 1; */
+
 }
 
 /* 头部栏 */
 .header {
-  width: 1920px;
+  width: 100%;
   height: 48px;
-  background: rgba(0, 0, 0, .6);
+  background: rgba(0, 0, 0, .54);
   /* background: red; */
-  /* 定位 */
-  /* position: relative; */
-  /* z-index: 5; */
-
+  /* 定位显示导航栏 */
+  position: absolute;
+  /* 首页、导航居中 */
+  text-align: center;
+  /* line-height: 48px; */
 }
 
 /* 故宫Logo */
-/* logo图的尺寸 */
-.toplogo img {
-  width: 115px;
-  height: 36.5px;
-
-}
-
-/* logo盒子 */
 .toplogo {
-  float: left;
-  /* text-align: center; */
-
-  margin-left: 30px;
+  display: inline-block;
+  width: 230px;
+  height: 48px;
+  text-align: left;
+  position: absolute;
+  top: 0;
+  left: 40px;
 }
 
-/* 首页等nav */
-.topnav_mean {
+.toplogo a {}
 
-  width: 1210px;
+.toplogo img {
+  /* width: 138px; */
   height: 100%;
-  line-height: 48px;
-  padding: 0 520px;
+  /* vertical-align: middle; */
+}
 
+/* 头部导航 */
+.topnav_mean {
+  display: inline-block;
+  font-size: 0;
+  margin-right: 100px;
 }
 
 .topnav_mean li {
-  float: left;
-  width: 106px;
-  height: 48px;
+  display: inline-block;
   font-size: 18px;
-
 }
 
-li a {
+.topnav_mean li>a {
+  display: inline-block;
+  padding: 12px 35px;
+  line-height: 24px;
   color: #fff;
+}
+
+.topnav_mean li>a:hover {
+  color: #c2a680;
+}
+
+
+/* 头部右边工具栏 */
+.topnav-r {
+  position: absolute;
+  top: 0;
+  right: 40px;
+}
+
+.topnav-r ul {
+  float: left;
+  padding-top: 15px;
+}
+
+.topnav-r li {
+  float: left;
+  /* display: inline-block; */
+  padding-left: 20px;
+  /* box-sizing: content-box; */
+}
+
+.topnav-r li a {
+  position: relative;
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+
+.topnav-r li img {
+  width: 17px;
+}
+
+.topnav-r li.login {
+  width: 39px;
+  height: 20px;
+}
+
+.topnav-r li.login:hover img {
+  margin-top: -20px;
+}
+
+.topnav-r li.lang {
+  width: 41px;
+  height: 20px;
+}
+
+.topnav-r li.lang img {
+  width: 18px;
+}
+
+.topnav-r li.lang:hover img {
+  margin-top: -24px;
+}
+
+.topnav-r li.scbtn {
+  width: 40px;
+  height: 20px;
+}
+
+.topnav-r li.scbtn img {}
+
+.topnav-r li.scbtn:hover img {
+  margin-top: -24px;
+}
+
+
+.topnav-r .tools li {
+  padding-left: 20px;
+  margin-left: 20px;
+  border-left: 1px solid #fff;
+  /* text-align: left; */
+  /* 阻止无法实现内边距效果 */
+  box-sizing: content-box;
+}
+
+.topnav-r .tools li:nth-child(1) {
+  border: 0;
+  margin: 0;
+}
+
+.topnav-r .tools li a {
+  padding-right: 22px;
+}
+
+/* 右边工具三角形 */
+.topnav-r .tools li a:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 3px solid transparent;
+  border-top: 5px solid #fff;
+  position: absolute;
+  right: 0;
+  top: 8px;
+}
+
+/* 菜单 */
+.topnav-r>a {
+  float: left;
+  display: block;
+  width: 34px;
+  height: 34px;
+  overflow: hidden;
+}
+
+.topnav-r .menutool {
+  margin-top: 7px;
+  margin-left: 28px;
+}
+
+.topnav-r>a img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+}
+
+.topnav-r .menutool:hover img {
+  margin-top: -33.8px;
 }
