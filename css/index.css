@@ -16,7 +16,6 @@ body {
 .header .lb_images {
   width: 100%;
   /* height: 100%; */
-
   /* 高度刚好为到轮播图 */
   height: 979px;
   position: relative;
@@ -24,12 +23,11 @@ body {
 
 .lb_images {
   /* position: absolute; */
-
 }
 
 /* 头部栏 */
 .header {
-  width: 100%;
+  width: 1920px;
   height: 48px;
   background: rgba(0, 0, 0, .54);
   /* background: red; */
@@ -69,6 +67,7 @@ body {
 .topnav_mean li {
   display: inline-block;
   font-size: 18px;
+  position: relative;
 }
 
 .topnav_mean li>a {
@@ -81,6 +80,140 @@ body {
 .topnav_mean li>a:hover {
   color: #c2a680;
 }
+
+/* 导航栏 */
+/* 三角 */
+.topnav_mean li i {
+  display: block;
+  visibility: hidden;
+  width: 18px;
+  height: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -9px;
+}
+
+.topnav_mean li i img {
+  width: 100%;
+  height: 100%;
+}
+
+.topnav_mean li:hover img {
+  visibility: visible;
+  transition: all .2s ease-out 0s;
+  /* transition-delay: 2s; */
+}
+
+/* 隐藏导航栏 */
+.topnav_mean .child {
+  position: absolute;
+  width: 1920px;
+  text-align: left;
+  line-height: 50px;
+  overflow: hidden;
+  background: url(../img/black60.png);
+  /* background-color: rgb(157, 131, 94, 0.71); */
+  /* 过渡 */
+  /* transform: scale(1.001, 1.001);
+  transition: transform 1000ms linear 0s; */
+}
+
+/* c2 */
+.topnav_mean .c2 {
+  top: 48px;
+  left: -592px;
+  /* 初始隐藏 */
+  height: 0;
+}
+
+.topnav_mean .child p {
+  /* display: inline-block; */
+  float: left;
+  margin-right: 15px;
+}
+
+.topnav_mean .child strong {
+  color: #fff;
+  background: url(../img/img6.png) right 5px no-repeat;
+  padding-right: 15px;
+  margin-right: 8px;
+}
+
+.topnav_mean .child p:nth-last-child(1) strong {
+  margin: 0;
+  background: none;
+  padding: 0;
+}
+
+.topnav_mean .child a {
+  color: #fff;
+  font-size: 15px;
+  font-weight: normal;
+  margin-right: 15px;
+  vertical-align: bottom;
+}
+
+.topnav_mean .child a:hover {
+  color: #c2a680;
+}
+
+/* 鼠标移入显示 */
+.topnav_mean li:hover .child {
+  display: block;
+  height: 51px;
+  /* 过渡 */
+  transition: all .25s ease-out 0s;
+}
+
+/* c3 */
+.topnav_mean .c3 {
+  top: 48px;
+  left: -698px;
+  /* 初始隐藏 */
+  height: 0;
+}
+
+/* c4 */
+.topnav_mean .c4 {
+  top: 48px;
+  left: -804px;
+  /* 初始隐藏 */
+  height: 0;
+}
+
+/* c5 */
+.topnav_mean .c5 {
+  top: 48px;
+  left: -910px;
+  /* 初始隐藏 */
+  height: 0;
+}
+
+/* c6 */
+.topnav_mean .c6 {
+  top: 48px;
+  left: -1016px;
+  /* 初始隐藏 */
+  height: 0;
+}
+
+/* c7 */
+.topnav_mean .c7 {
+  top: 48px;
+  left: -1122px;
+  /* 初始隐藏 */
+  height: 0;
+}
+
+/* c8 */
+.topnav_mean .c8 {
+  top: 48px;
+  left: -1228px;
+  /* 初始隐藏 */
+  height: 0;
+}
+
 
 
 /* 头部右边工具栏 */
@@ -99,7 +232,7 @@ body {
   float: left;
   /* display: inline-block; */
   padding-left: 20px;
-  /* box-sizing: content-box; */
+  position: relative;
 }
 
 .topnav-r li a {
@@ -110,6 +243,11 @@ body {
   line-height: 20px;
   height: 20px;
   overflow: hidden;
+  cursor: auto;
+}
+
+.topnav-r li:hover a {
+  opacity: 0.8;
 }
 
 .topnav-r li img {
@@ -135,18 +273,25 @@ body {
 }
 
 .topnav-r li.lang:hover img {
-  margin-top: -24px;
+  margin-top: -23px;
 }
 
 .topnav-r li.scbtn {
   width: 40px;
   height: 20px;
 }
-
-.topnav-r li.scbtn img {}
+.topnav-r li.scbtn a {
+  
+  position: relative;
+  z-index: 111;
+}
+.topnav-r li.scbtn img {
+  position: absolute;
+  z-index: 111;
+}
 
 .topnav-r li.scbtn:hover img {
-  margin-top: -24px;
+  margin-top: -22px;
 }
 
 
@@ -154,9 +299,9 @@ body {
   padding-left: 20px;
   margin-left: 20px;
   border-left: 1px solid #fff;
-  /* text-align: left; */
   /* 阻止无法实现内边距效果 */
   box-sizing: content-box;
+
 }
 
 .topnav-r .tools li:nth-child(1) {
@@ -202,4 +347,86 @@ body {
 
 .topnav-r .menutool:hover img {
   margin-top: -33.8px;
+}
+
+/* 工具栏隐藏栏 */
+.topnav-r .tools .loginbox {
+  background: url(../img/login-box.png) no-repeat 0 bottom;
+
+  width: 80px;
+  height: 70px;
+  position: absolute;
+  top: 2px;
+  left: -2px;
+  padding-top: 35px;
+  box-sizing: content-box;
+  /* 初始隐藏--登录注册 */
+  display: none;
+}
+
+
+.topnav-r .tools .language {
+  background: url(../img/login-box.png) no-repeat 0 bottom;
+  width: 80px;
+  height: 70px;
+  position: absolute;
+  top: 2px;
+  left: -2px;
+  padding-top: 35px;
+  box-sizing: content-box;
+  /* 初始隐藏--版本切换 */
+  display: none;
+}
+
+.topnav-r .tools .a {
+  display: block;
+  height: 34px;
+  line-height: 34px;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.topnav-r .tools .a:hover {
+  color: #c2a680;
+}
+
+.topnav-r .login:hover .loginbox,
+.topnav-r .lang:hover .language {
+  display: block;
+}
+
+
+/* 搜索框 */
+.topnav-r .tools .search {
+  background: url(../img/search.png) no-repeat center bottom;
+  width: 280px;
+  height: 80px;
+  padding-top: 40px;
+  display: none;
+  position: absolute;
+  top: 2px;
+  right: 0px;
+}
+
+.topnav-r .search .keyword_search {
+  background: none;
+  border: none;
+  width: 240px;
+  height: 100%;
+  line-height: 40px;
+  height: 40px;
+  font-size: 14px;
+  padding: 0 10px;
+  color: #fff;
+  float: left;
+}
+
+.topnav-r .search .ok {
+  background: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  float: left;
+  cursor: pointer;
 }
