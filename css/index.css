@@ -459,16 +459,32 @@ body {
   margin-top: 30px;
 }
 
+/* 故宫信息 */
 .main_content .palace_information {}
 
+
+/* 故宫信息左边 */
 .palace_information .left {
   float: left;
+}
+
+/* 盒子1 */
+.palace_information .box1 {
+  transition: opacity 0.5s ease-out 0.6s, transform 1s ease-out 0.6s;
+  -webkit-transition: opacity 0.5s ease-out 0.6s, transform 1s ease-out 0.6s;
+  opacity: 0;
+  transform: translateY(50px);
+  -webkit-transform: translateY(50px);
 }
 
 .main_content .palace_information .box1 {
   width: 928px;
   height: 455px;
   background: url(../img/home_block1_news_bg.jpg);
+
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  opacity: 1;
 }
 
 .palace_information .left .news {
@@ -675,31 +691,54 @@ body {
 }
 
 
-/* 数字多宝阁 */
-.palace_information .left .box2{
-  /* margin-top: 30px; */
+/* 盒子2：数字多宝阁 */
+.palace_information .left .box2 {
+  margin-top: 30px;
 }
 
-.palace_information .box2 .bg{
+.palace_information .box2 .bg {
   height: 451px;
   background: url(../img/home_block1_box1_bg.jpg) no-repeat center;
-}
-
-.palace_information .box2 a{
   position: relative;
 }
 
-.palace_information .box2 .num_ts{
-  height: 100%;
+.palace_information .box2 a {
+  position: relative;
 }
 
-.box2 .num_ts img{
-  width: 1000%;
+.palace_information .box2 .num_ts {
   height: 100%;
+  overflow: hidden;
 }
 
-.palace_information .box2 .dr_vase{
+.box2 img {
+  width: 100%;
+}
+
+.palace_information .box2 .dr_vase {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
+  width: 557px;
+  height: 576px;
+  overflow: hidden;
 }
+
+
+
+/* 故宫信息右边 */
+.palace_information .right {
+  float: left;
+  margin-left: 32px;
+}
+
+/* 盒子3  */
+
+
+
+
+
+
+
+
+/* 盒子4 */
