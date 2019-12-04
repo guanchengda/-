@@ -11,9 +11,15 @@ body {
 
 
 /* ACTION */
-/* 1、头部与轮播区域样式 */
+/* 1. 头部与轮播区域样式 */
+.topheader {
+  height: 979px;
+  background: #ccc;
+  margin: 0 auto;
+}
+
 /* 头部轮播背景图 */
-.header .lb_images {
+.lb_images {
   width: 100%;
   /* height: 100%; */
   /* 高度刚好为到轮播图 */
@@ -22,7 +28,8 @@ body {
 }
 
 .lb_images {
-  /* position: absolute; */
+  position: relative;
+  z-index: 333;
 }
 
 /* 头部栏 */
@@ -36,6 +43,7 @@ body {
   /* 首页、导航居中 */
   text-align: center;
   /* line-height: 48px; */
+  z-index: 666;
 }
 
 /* 故宫Logo */
@@ -99,10 +107,15 @@ body {
   height: 100%;
 }
 
-.topnav_mean li:hover img {
+.topnav_mean li:hover i {
+  /* visibility: visible; */
+  transition: all .1s ease-in 0s;
+
+}
+
+/* jq控制添加的cur类名：显示三角形 */
+.topnav_mean li .cur {
   visibility: visible;
-  transition: all .2s ease-out 0s;
-  /* transition-delay: 2s; */
 }
 
 /* 隐藏导航栏 */
@@ -259,6 +272,11 @@ body {
   height: 20px;
 }
 
+.topnav-r li.login a {
+  position: relative;
+  z-index: 111;
+}
+
 .topnav-r li.login:hover img {
   margin-top: -20px;
 }
@@ -266,6 +284,11 @@ body {
 .topnav-r li.lang {
   width: 41px;
   height: 20px;
+}
+
+.topnav-r li.lang a {
+  position: relative;
+  z-index: 111;
 }
 
 .topnav-r li.lang img {
@@ -280,15 +303,13 @@ body {
   width: 40px;
   height: 20px;
 }
+
 .topnav-r li.scbtn a {
-  
   position: relative;
   z-index: 111;
 }
-.topnav-r li.scbtn img {
-  position: absolute;
-  z-index: 111;
-}
+
+.topnav-r li.scbtn img {}
 
 .topnav-r li.scbtn:hover img {
   margin-top: -22px;
@@ -429,4 +450,256 @@ body {
   height: 40px;
   float: left;
   cursor: pointer;
+}
+
+
+
+/* 2. 主要内容 */
+.main_content {
+  margin-top: 30px;
+}
+
+.main_content .palace_information {}
+
+.palace_information .left {
+  float: left;
+}
+
+.main_content .palace_information .box1 {
+  width: 928px;
+  height: 455px;
+  background: url(../img/home_block1_news_bg.jpg);
+}
+
+.palace_information .left .news {
+  padding: 37.6% 2% 3%;
+  padding-top: 3%;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* 故宫 · 资讯 */
+.palace_information img {
+  vertical-align: middle;
+}
+
+.palace_information .news {
+  float: left;
+  width: 466px;
+  /* height: 455px;  */
+}
+
+.palace_information .news .title {
+  margin-bottom: 21px;
+  height: 53px;
+}
+
+.main_content .title h1 {
+  float: left;
+  line-height: 36px;
+  padding-top: 10px;
+  font-size: 0;
+}
+
+.main_content .title span {
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.main_content .title .tit-span {
+  width: 24px;
+  height: 36px;
+}
+
+.tit-span {
+  margin: 0 10px;
+  position: relative;
+  top: -3px;
+}
+
+.s1 {
+  position: relative;
+  top: -1px;
+}
+
+.main_content .title .tit-span>img {
+  width: 24px;
+  height: 100%;
+  margin: auto;
+}
+
+.main_content .title_dot {
+  padding-left: 20px;
+  padding-right: 19px;
+}
+
+.title_dot {
+  position: relative;
+  top: -1px;
+}
+
+/* 更多 */
+.main_content .more {
+  float: right;
+  position: relative;
+  right: 14px;
+  line-height: 1;
+  width: 1em;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 17px;
+  margin-top: 5px;
+}
+
+.main_content .more i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 100%;
+  background: url(../img/more.png) no-repeat;
+}
+
+.main_content .more:hover i {
+  /* -webkit针对 safari 浏览器支持 */
+  -webkit-transform: rotate(-180deg);
+  /* 旋转180° */
+  transform: rotate(-180deg);
+  /* -webkit针对 safari 浏览器支持 */
+  -webkit-transition: all 0.5s linear;
+  /* 旋转过渡 */
+  transition: all 0.5s linear;
+}
+
+/* 声明 */
+.news .list1 {
+  color: #fff;
+  margin: 0 3%;
+  padding-bottom: 15px;
+}
+
+.news .list1 a {
+  position: relative;
+  color: #fff;
+  width: 404px;
+  padding: 5px 0;
+  padding-left: 25px;
+  font-size: 16px;
+  /* 规定一行显示 */
+  white-space: nowrap;
+  /* 超出隐藏 + 出现省略号 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* 列表图 */
+  background: url(../img/index-icon2-1.png) no-repeat left center;
+  background-size: 17px 14px;
+}
+
+/* 资讯 */
+.news .list2 {
+  margin-left: 3%;
+  overflow: hidden;
+  background: url(../img/index-icon3.png) repeat-x;
+  padding-top: 9px;
+}
+
+.news .list2 li {
+  margin: 13px 0;
+  overflow: hidden;
+}
+
+.news .list2 p {
+  float: right;
+  width: 60px;
+  height: 26px;
+  font-size: 17px;
+  font-family: Arial;
+  line-height: 22px;
+}
+
+.news .list2 p span {
+  font-size: 22px;
+}
+
+.news .list2 li a {
+  display: block;
+  font-size: 14px;
+  color: #fff;
+  padding-left: 20px;
+  margin-right: 65px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+}
+
+.news .list2 li a:before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 8px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.news .list2 li a:hover {
+  color: #f3eb96;
+}
+
+
+/* 资讯图 */
+.palace_information .img {
+  overflow: hidden;
+}
+
+.palace_information .box1 .img {
+  float: right;
+  width: 462px;
+  height: 455px;
+  overflow: hidden;
+}
+
+.palace_information .img img {
+  width: 100%;
+  height: 100%;
+
+  transform: scale3d(1, 1, 1);
+  transition: opacity 0.35s ease 0s, transform 0.35s ease 0s;
+}
+
+.palace_information .img:hover img {
+  transform: scale3d(1.15, 1.15, 1);
+}
+
+
+/* 数字多宝阁 */
+.palace_information .left .box2{
+  /* margin-top: 30px; */
+}
+
+.palace_information .box2 .bg{
+  height: 451px;
+  background: url(../img/home_block1_box1_bg.jpg) no-repeat center;
+}
+
+.palace_information .box2 a{
+  position: relative;
+}
+
+.palace_information .box2 .num_ts{
+  height: 100%;
+}
+
+.box2 .num_ts img{
+  width: 1000%;
+  height: 100%;
+}
+
+.palace_information .box2 .dr_vase{
+  position: absolute;
+  top: 0;
+  left: 0;
 }
