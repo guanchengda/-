@@ -22,3 +22,8 @@ a,a:hover{color:#333;}
 
 /* 清除图片三像素BUG */
 img{vertical-align: top;}
+/* 标题 */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    line-height: 1.2;
+}

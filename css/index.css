@@ -3,7 +3,7 @@
 }
 
 body {
-  /* height: 2666px; */
+  height: 2666px;
   line-height: 1.5;
   font-family: 微软雅黑, 'Heiti SC', 黑体, Arial;
 }
@@ -459,7 +459,7 @@ body {
   margin-top: 30px;
 }
 
-/* 故宫信息 */
+/* 2.1.1 故宫信息 */
 .main_content .palace_information {}
 
 
@@ -698,7 +698,7 @@ body {
 
 .palace_information .box2 .bg {
   height: 451px;
-  background: url(../img/home_block1_box1_bg.jpg) no-repeat center;
+  background: url(../img/home_block1_box2_bg.jpg) no-repeat center;
   position: relative;
 }
 
@@ -706,13 +706,17 @@ body {
   position: relative;
 }
 
+.box2 img {
+  width: 100%;
+}
+
 .palace_information .box2 .num_ts {
   height: 100%;
   overflow: hidden;
 }
 
-.box2 img {
-  width: 100%;
+.box2 .num_ts img {
+  height: 100%;
 }
 
 .palace_information .box2 .dr_vase {
@@ -733,12 +737,317 @@ body {
 }
 
 /* 盒子3  */
+.palace_information .box3 li {
+  float: left;
+  width: 204px;
+  height: 292px;
+}
 
+/* 在线预约订票 */
+.box3 .tkt {
+  background: url(../img/home_block1_box3_bg1.jpg);
+  position: relative;
+  overflow: hidden;
+}
 
+/* 全景虚拟游览 */
+.box3 .stsg {
+  background: url(../img/home_block1_box3_bg2.jpg);
+  position: relative;
+  overflow: hidden;
+}
 
+/* 博物馆活动 */
+.box3 .aty {
+  background: url(../img/home_block1_box3_bg3.jpg);
+  position: relative;
+  overflow: hidden;
+}
 
+.box3 .bg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -126px;
+  width: 240px;
+  height: 252px;
+}
 
+/* 动画效果 */
+.box3 .bg img {
+  -webkit-animation: swinging 30s linear 0s infinite;
+  animation: swinging 30s linear 0s infinite;
+}
 
+/* 动画暂停 */
+.box3 .bg img:hover {
+  animation-play-state: paused;
+}
+
+/* 动画设置 */
+@keyframes swinging {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.box3 .icon {
+  height: 110px;
+  padding-top: 36px;
+  margin: 0 30px 86px;
+}
+
+.box3 .icon img {
+  height: 100%;
+}
+
+.box3 .cont {
+  padding: 0 30px;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+.box3 .cont h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.box3 .cont p {
+  line-height: 22px;
+  font-size: 14px;
+}
 
 
 /* 盒子4 */
+.palace_information .box4 {
+  background: url(../img/home_block1_box4_bg.jpg);
+  margin-top: 30px;
+  color: #fff;
+  /* box4整块高度方法一： */
+  /* padding-bottom: 24px; */
+}
+
+.palace_information .box4 .title {
+  margin: 0 38px 0 3%;
+}
+
+/* item1 */
+.box4 .item1 {
+  border-bottom: 1px solid #102234;
+  padding-bottom: 42px;
+}
+
+.box4 .item1 .title {
+  padding-top: 34px;
+}
+
+.item1 .list {
+  padding-top: 35px;
+  margin-left: 20px;
+  margin-bottom: 5%;
+  margin-top: -6px;
+}
+
+
+.item1 .list li {
+  float: left;
+  width: 22.5%;
+  color: #fff;
+  margin-left: 2%;
+  font-size: 14px;
+  font-family: Impact, Arial;
+}
+
+.item1 .list li>h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+  padding-right: 30px;
+  background: url(../img/huiwen2.png) no-repeat right;
+}
+
+.item1 .list li:nth-last-child(1)>h1 {
+  padding: 0;
+  background: none;
+}
+
+/* 门票 */
+.item1 .tip {
+  padding-left: 6%;
+}
+
+.item1 .tip p {
+  color: #a0b4c2;
+  line-height: 26px;
+  font-size: 14px;
+}
+
+.item1 .tip p>span {
+  margin-right: 15px;
+}
+
+.item1 .tip p i {
+  margin-right: 15px;
+  padding-right: 20px;
+  display: inline-block;
+  background: url(../img/wxx_shuxina.png) no-repeat right center;
+}
+
+
+
+/* item2 */
+.box4 .item2 {
+  border-top: 1px solid #334a61;
+  /* box4整块高度方法二： */
+  padding-bottom: 24px;
+}
+
+.box4 .item2 .title {
+  padding-top: 25px;
+}
+
+/* 开放信息 */
+.box4 .item2 .list1 {
+  color: #fff;
+  margin: 0 5%;
+  margin-top: 10px;
+}
+
+
+.item2 .list1 a {
+  position: relative;
+  color: #fff;
+  padding: 6px 0;
+  padding-left: 28px;
+  font-size: 16px;
+  /* 规定一行显示 */
+  white-space: nowrap;
+  /* 超出隐藏 + 出现省略号 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* 列表图 */
+  background: url(../img/index-icon2-1.png) no-repeat left center;
+  background-size: 17px 14px;
+}
+
+/* 公告信息 */
+.item2 .list2 {
+  height: 80px;
+  margin: 0 6%;
+  /* margin: 0 32px;
+  margin-right: 6%; */
+}
+
+.item2 .list2 li {
+  padding: 6px 0;
+  height: 36px;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+.item2 .list2 p {
+  float: right;
+  font-family: Arial;
+  font-size: 16px;
+  color: #fff;
+}
+
+.item2 .list2 a {
+  display: block;
+  color: #fff;
+  position: relative;
+  padding-left: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item2 .list2 a:before {
+  content: '';
+  position: absolute;
+  left: 1px;
+  top: 10px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.item2 .list2 a:hover {
+  color: #a0b4c2;
+}
+
+
+
+/* 2.1.2 故宫藏品 */
+.antique {
+  margin-top: 30px;
+  height: 464px;
+}
+
+/* 数据栏 */
+.antique .data_list {
+  float: left;
+  width: 464px;
+  background: url(../img/home_block2_box_bg1920.jpg) no-repeat;
+  margin-right: 30px;
+  height: 464px;
+}
+
+.data_list .title {
+  color: #fff;
+}
+
+.antique {}
+
+
+
+
+/* SVG 待定 */
+/* .link {
+  position: absolute;
+  left: 50%;
+  margin-left: -70px;
+  bottom: 46px;
+  width: 140px;
+  height: 40px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 40px;
+  color: #fff;
+} */
+
+/* path {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  stroke-width: 2;
+  stroke-dashoffset: 0px;
+  stroke-dasharray: 500, 500
+}
+
+.link:hover path {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  stroke-width: 2;
+  stroke-dashoffset: -1000px;
+  stroke-dasharray: 500, 500;
+  transition: stroke-dashoffset 500ms 2 ease 0s，stroke-dasharray 500ms ease 0s;
+  transition: all 1s ;
+} */
+
+
+
+
+/* 藏品栏 */
+.antique .antique_list {}
+
+.antique .antique_list li{
+  float: left;
+  width: 386px;
+  height: 464px;
+  position: relative;
+  overflow: hidden;
+}
