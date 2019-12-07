@@ -455,7 +455,7 @@
     <!-- 3.1 版心 -->
     <div class="container clearfix">
       <!-- 3.1.1 网站访问量-->
-      <div class="num">网站访问量<span><i>7</i><i>4</i><i>1</i><i>8</i><i>4</i><i>9</i></i><i>9</i><i>4</i></span></div>
+      <div class="num">网站访问量<span><i>7</i><i>4</i><i>2</i><i>2</i><i>0</i><i>6</i></i><i>7</i><i>7</i></span></div>
       <!-- 3.1.2 底部导航-->
       <div class="bottom_nav">
         <a href="#">网站地图</a>&nbsp;&nbsp;
@@ -465,7 +465,7 @@
         <a href="#">版权声明</a>&nbsp;&nbsp;
         <a href="#">常见问题</a>&nbsp;&nbsp;
         <a href="#">联系我们</a>&nbsp;&nbsp;
-        <a href="#">关于我们</a>
+        <a href="#">关于我们</a>&nbsp;&nbsp;
       </div>
       <!-- 3.1.3 版权 -->
       <div class="copyright">
@@ -478,20 +478,68 @@
         <a href="#">浏览建议</a>
       </div>
       <!-- 3.1.5 二维码-->
+      <div class="qr_code">
+        <a><img src="./img/ico_hand.png" alt="二维码"></a>
+      </div>
     </div>
   </div>
 
 
+  <!-- 4. 固定定位导航栏 -->
+  <div class="fix_nav">
+    <a href="#"><img src="./img/sidebar_gotop.png" alt="直达顶部"></a>
+    <div class="nav">
+      <ul>
+        <li><a href="#" class="season">
+            <span>常</span>
+            <span>
+              <i>年</i> · <i>庆</i> · <i>博</i> · <i>春</i> · <i>夏</i> · <i>秋</i> · <i>冬</i> · <i>常</i>
+            </span>
+          </a>
+        </li>
+        <li><a href="#" class="x">
+            <span>享</span>
+            <span class="icons">
+              <i><img src="./img/share-icon1.png" alt="微博"></i>
+              <i><img src="./img/share-icon2.png" alt="微信"></i>
+            </span>
+          </a>
+        </li>
+        <li><a href="#" class="s">
+            <span>书</span>
+            <span>图书馆</span>
+          </a>
+        </li>
+        <li><a href="#" class="t">
+            <span>听</span>
+            <span>视听馆</span>
+          </a>
+        </li>
+        <li><a href="#" class="c">
+            <span>创</span>
+            <span>文创馆</span>
+          </a>
+        </li>
+        <li><a href="#" class="j">
+            <span>景</span>
+            <span>全景故宫</span>
+          </a>
+        </li>
+        <li><a href="#" class="v">
+            <span>VR</span>
+            <span>V故宫</span>
+          </a>
+        </li>
+        <li><a href="#" class="d">
+            <span>登</span>
+            <span>会员登录</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <a class="close"></a>
 
-
-
-
-
-
-
-
-
-
+  </div>
 
 
 
@@ -505,7 +553,7 @@
   $(".topnav_mean li").hover(
     function () {
       $(this).children("i").addClass("cur")
-      console.log($(this).children("i"));
+      // console.log($(this).children("i"));
     },
     function () {
       $(this).children("i").removeClass("cur")
@@ -522,6 +570,16 @@
   $(".lang").mouseover(function () {
     $(".search").hide();
   })
+
+  // 固定导航栏伸缩
+  $(".close").click(function () {
+    $(this).toggleClass("up")
+  });
+
+  // $(".close").toggle(
+  //   function(){
+  //   $(".fix_nav .nav").css("height","0")}
+  // )
 
 
 

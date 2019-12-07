@@ -1314,6 +1314,7 @@ path {
 .bottom {
   padding-top: 30px;
   padding-bottom: 27px;
+  line-height: 1;
 }
 
 .bottom a {
@@ -1329,7 +1330,7 @@ path {
 
 .bottom .num span {
   display: inline-block;
-  margin-left: 12px;
+  margin-left: 10px;
   vertical-align: middle;
 }
 
@@ -1337,14 +1338,16 @@ path {
   display: inline-block;
   width: 20px;
   height: 28px;
-  background: #404040;
-  margin-right: 6px;
   line-height: 28px;
+  text-align: center;
+  background: #404040;
+  margin: 0 3px;
 }
 
 /* 3.1.2 底部导航 */
 .bottom_nav {
-  margin-top: 16px;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .bottom_nav a {
@@ -1353,15 +1356,15 @@ path {
 
 /* 3.1.3 版权 */
 .copyright {
-  margin-bottom: 16px;
+  margin-top: 5px;
 }
 
 /* 3.1.4 浏览建议 */
 .bottom .btns {
-  
+  margin-top: 15px;
 }
 
-.bottom .btns a{
+.bottom .btns a {
   display: inline-block;
   height: 30px;
   line-height: 26px;
@@ -1371,3 +1374,203 @@ path {
 
 
 /* 3.1.5 二维码 */
+.bottom .qr_code {
+  position: absolute;
+  top: 35px;
+  right: 388px;
+  z-index: 520;
+}
+
+.bottom .qr_code a {
+  position: relative;
+  display: block;
+}
+
+.qr_code a::after {
+  content: "";
+  background: url(../img/ico_hand2.png) no-repeat;
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  bottom: -10px;
+  right: -9px;
+
+  animation: finger 3s linear 0s infinite;
+  /* -webkit 私有chrome、 safari*/
+  -webkit-animation: finger 3s linear 0s infinite;
+}
+
+/* 律动起来~ */
+@keyframes finger {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  10% {
+    transform: translate(5px, 5px);
+  }
+
+  20% {
+    transform: translate(0, 0);
+  }
+
+  30% {
+    transform: translate(5px, 5px);
+  }
+
+  40% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@-webkit-keyframes finger {
+  0% {
+    -webkit-transform: translate(0, 0);
+  }
+
+  10% {
+    -webkit-transform: translate(5px, 5px);
+  }
+
+  20% {
+    -webkit-transform: translate(0, 0);
+  }
+
+  30% {
+    -webkit-transform: translate(5px, 5px);
+  }
+
+  40% {
+    -webkit-transform: translate(0, 0);
+  }
+
+  100% {
+    -webkit-transform: translate(0, 0);
+  }
+}
+
+
+.qr_code a::before {
+  content: "";
+  background: url(../img/QR_code.jpg) no-repeat top;
+  width: 282px;
+  height: 448px;
+  position: absolute;
+  bottom: 58px;
+  left: -122px;
+  cursor: auto;
+  /* 初始隐藏 */
+  display: none;
+}
+
+.qr_code:hover a::before {
+  display: block;
+}
+
+
+
+/* 4. 固定定位导航栏 */
+.fix_nav {
+  position: fixed;
+  bottom: 102px;
+  right: 130px;
+}
+
+.fix_nav .nav li {
+  width: 42px;
+  height: 42px;
+  background: url(../img/sidebar_bg.png);
+  margin: 1px 0;
+  text-align: center;
+  position: relative;
+}
+
+.fix_nav a {
+  display: block;
+}
+
+.fix_nav .nav a {
+  min-width: 42px;
+  height: 42px;
+  color: #fff;
+  font-size: 24px;
+  line-height: 42px;
+  position: relative;
+  /* 方便省事：年、庆、博、、 */
+  white-space: nowrap;
+}
+
+.fix_nav .nav .x {
+  line-height: 43px;
+}
+
+.fix_nav .x .icons {
+  padding: 0 10px;
+  line-height: 43px;
+}
+
+.fix_nav .x .icons>i {
+  display: inline-block;
+  width: 30px;
+  height: 22px;
+  line-height: 22px;
+  margin: 0 10px;
+}
+
+.fix_nav .x .icons>i>img {
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: -1px;
+}
+
+/* 显示具体菜单 */
+.fix_nav .nav a {
+  position: absolute;
+  top: 0;
+  right: 0px;
+}
+
+.fix_nav .nav a:hover {
+  background-color: #977343;
+  border-radius: 21px;
+}
+
+.fix_nav .nav span:nth-child(2) {
+  display: block;
+  color: #fff;
+  padding: 0 20px;
+  display: none;
+}
+
+.fix_nav .nav a:hover span:nth-child(1) {
+  display: none;
+}
+
+.fix_nav .nav a:hover span:nth-child(2) {
+  display: block;
+}
+
+/* 缩小 */
+
+
+.fix_nav .close {
+  background: url(../img/sidebar_close.png) no-repeat;
+  min-width: 42px;
+  height: 42px;
+}
+
+.fix_nav .close.up{
+  background: url(../img/sidebar_up.png) no-repeat;
+}
+
+.fix_nav p{
+  background: url(../img/sidebar_up.png) no-repeat;
+  min-width: 42px;
+  height: 42px;
+}
+
+
