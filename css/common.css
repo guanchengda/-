@@ -6,6 +6,15 @@
 }
 
  
+/* 登录子页面 版心 */
+.container_login{
+    position: relative;
+    width: 1258px;
+    margin: 0 auto;
+}
+
+
+
 /* 清除浮动 */
 .clearfix:before,
 .clearfix:after {

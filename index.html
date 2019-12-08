@@ -13,11 +13,21 @@
   <link rel="stylesheet" href="./lib/reset.css">
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/index.css">
+  <!-- 引入js -->
+  <script src="./lib/jquery-1.12.4.js"></script>
+  <!-- 轮播、 -->
+  <!-- <script src="./lib/jquery-1.8.3.min.js"></script> -->
+  <script src="./lib/jquery.easing.1.3.js"></script>
+  <script src="./lib/jquery.transit.min.js"></script>
+  <script src="./lib/jquery.mChange.zoom.js"></script>
+  <!-- 滚轮 -->
+  <script src="./lib/jquery.mousewheel.min.js"></script>
+  <script src="./lib/jquery.nicescroll.min.js"></script>
+  <!-- 引入mouse方向 -->
+  <script src="./lib/mousedirection.js"></script>
 </head>
 
 <body>
-
-
   <!-- 1. 头部与轮播区域标签 -->
   <div class="topheader">
     <div class="header clearfix">
@@ -94,13 +104,44 @@
           </div>
         </li>
       </ul>
+      <script>
+        // 移入导航显示三角形，移出后消失
+        $(".topnav_mean li").hover(
+          function () {
+            $(this).children("i").addClass("cur")
+            // console.log($(this).children("i"));
+          },
+          function () {
+            $(this).children("i").removeClass("cur")
+          }
+        );
+        // 头部导航hover颜色
+        $(".topnav_mean i").hover(
+          function () {
+            $(this).parent().children('a').css("color", "#c2a680")
+          },
+          function () {
+            $(this).parent().children('a').css("color", "")
+          }
+        );
+        // 头部导航hover颜色
+        $(".topnav_mean .child").hover(
+          function () {
+            $(this).parent().children('a').css("color", "#c2a680")
+          },
+          function () {
+            $(this).parent().children('a').css("color", "")
+          }
+        );
+      </script>
+
       <!-- 头部右边工具栏 -->
       <div class="topnav-r clearfix">
         <ul class="tools">
           <li class="login">
             <a href="#"><img src="./img/ico_tools_search2.png" alt="登录注册"></a>
             <div class="loginbox">
-              <span class="a">登录</span>
+              <span class="a" onclick="window.location.href='/login.html'">登录</span>
               <span class="a">注册</span>
             </div>
           </li>
@@ -124,9 +165,98 @@
         <!-- 三横杠 -->
         <a href="#" class="menutool"><img src="./img/menu2.png" alt=""></a>
       </div>
+      <script>
+        // 点击搜索图标，显示和隐藏
+        $("#fdj").click(function () {
+          $(".search").toggle();
+        })
+        // 移到登录、版本图标后隐藏搜索
+        $(".login").mouseover(function () {
+          $(".search").hide();
+        });
+        $(".lang").mouseover(function () {
+          $(".search").hide();
+        });
+      </script>
     </div>
-    <!-- <div class="lb_images"><img src="./img/lb_bg01.jpg" alt="书中自有缤纷"></div> -->
-    <!-- <div class="lb_images"></div> -->
+
+    <!-- 动态：轮播图:::: -->
+    <div class="focus">
+      <div>
+        <style type="text/css">
+          #wrap-banner {}
+        </style>
+        <a id="wrap-banner" href="javascript:void(0);"></a>
+        <ul>
+          <li>
+            <a href="https://young.dpm.org.cn/ency_haicuo" target="_blank"
+              style="background:url('./img/lb_1.jpg') no-repeat center;background-size:auto 100%;"></a>
+          </li>
+          <li>
+            <a href="https://webapp.vizen.cn/pro_vizen_template/#/albumpc/1911173214?isAutoJump=true" target="_blank"
+              style="background:url('./img/lb_2.jpg') no-repeat center;background-size:auto 100%;"></a>
+          </li>
+          <li>
+            <a href="http://quanjing.artron.net/scene/IINGbrSFm9TejnW1TCgG1TJi2siY3tMV/yuzhuoyundanchenbainianjinianzhan/tour.html"
+              target="_blank" style="background:url('./img/lb_3.jpg') no-repeat center;background-size:auto 100%;"></a>
+          </li>
+          <li>
+            <a href="https://digicol.dpm.org.cn/" target="_blank"
+              style="background:url('./img/lb_4.jpg') no-repeat center;background-size:auto 100%;"></a>
+          </li>
+        </ul>
+        <div class="nav">
+          <i class="now"></i><i></i><i></i><i></i>
+        </div>
+      </div>
+      <div class="prev"><a href="javascript:;"></a></div>
+      <div class="next"><a href="javascript:;"></a></div>
+    </div>
+    <!-- js轮播操作 -->
+    <script>
+      // 通过监听改变屏幕来计算高度
+      $(window).on('resize', function () {
+        setTimeout(function () {
+          $('.focus').height($(window).height())
+        }, 500)
+
+      }).trigger('resize')
+
+      // 获取元素设置背景图片
+      $('.focus ul li').mChange({
+        auto: 1, //是否自动播放,1为自动,0为手动
+        arrow: 1, //是否反转箭头,1为点击左侧向右滚动,0则相反
+        speed: 1000, //效果速度,大于0.3
+        time: 5000, //周期时间，大于1
+        nav: $('.focus .nav i'), //导航
+        nave: "click", //导航事件
+        navs: 0, //导航滚动
+        prev: ".focus .prev a", //上一个
+        next: ".focus .next a", //下一个
+        cycle: 1, //是否循环
+        mousestop: 0, //是否鼠标划入停止
+        mousewheel: 0, //是否开启滚轮事件
+        animates: function (idx) {} //自定义函数
+      });
+
+      // 当鼠标移动到箭头的时候显示左右2个箭头，透明度设置为1
+      $('.prev').mouseover(function () {
+        $(this).children().css("opacity", 1)
+      })
+
+      $('.next').mouseover(function () {
+        $(this).children().css("opacity", 1)
+      })
+
+      //当鼠标离开的时候分别隐藏2个箭头,透明度设置为0
+      $('.prev').mouseout(function () {
+        $(this).children().css("opacity", 0)
+      })
+
+      $('.next').mouseout(function () {
+        $(this).children().css("opacity", 0)
+      })
+    </script>
   </div>
 
 
@@ -368,11 +498,106 @@
 
         <!-- 藏品栏 -->
         <ul class="antique_list">
-          <li><img src="./img/antique_1.jpg" alt="藏品1"></li>
-          <li><img src="./img/antique_2.jpg" alt="藏品2"></li>
-          <li><img src="./img/antique_3.jpg" alt="藏品3"></li>
+          <li>
+            <img src="./img/antique_1.jpg" alt="藏品1">
+            <div class="mask"
+              style="position: absolute; width: 386px; height: 464px; top: 0px; left: -386px; z-index: 99; opacity: 1;">
+              <a href="/collection/jade/232278.html">
+                <p>白玉炉、瓶、盒三式</p>
+                <p>清</p>
+                <p>炉高10厘米，宽15.5厘米；瓶高12厘米，宽4.5厘米；盒高3厘米，直径5.9厘米</p>
+                <p></p>
+                <p class="jj">三式是文人雅士几案上的常备设置，为焚香器具，由炉、瓶、盒三件组成，故名。炉用于燃香；瓶放置铲、箸，用于铲除香灰和夹取香料；盒存储香料。</p>
+                <p class="pos"></p>
+                <h1></h1>
+              </a>
+            </div>
+          </li>
+          <li>
+            <img src="./img/antique_2.jpg" alt="藏品2">
+            <div class="mask"
+              style="position: absolute; width: 386px; height: 464px; top: 0px; left: -386px; z-index: 99; opacity: 1;">
+              <a href="/collection/paint/231409.html">
+                <p>赵佶听琴图轴</p>
+                <p>宋</p>
+                <p>纵147.2厘米，横51.3厘米</p>
+                <p></p>
+                <p class="jj">此幅描绘官僚贵族雅集听琴的场景。作品构图简净，人物举止形貌刻画传神，树石器具描写工致，着色浑厚而不失清丽，是宋代宫廷人物画的代表作品。</p>
+                <p class="pos"></p>
+                <h1></h1>
+              </a>
+            </div>
+          </li>
+          <li>
+            <img src="./img/antique_3.jpg" alt="藏品3">
+            <div class="mask"
+              style="position: absolute; width: 386px; height: 464px; top: 0px; left: -386px; z-index: 99; opacity: 1;">
+              <a href="/collection/gear/229634.html">
+                <p>紫漆描金山水纹海棠式香几</p>
+                <p>清</p>
+                <p>高86厘米，长54厘米，宽44.5厘米</p>
+                <p></p>
+                <p class="jj">香几是承放香炉的家具，室内外均可使用。多采用曲线结构，腿做成三弯式，修长优美，足下踩托泥，造型端庄婉丽。此件便是典型的一例。</p>
+                <p class="pos"></p>
+                <h1></h1>
+              </a>
+            </div>
+          </li>
         </ul>
       </div>
+      <!-- mouse方向 -->
+      <script>
+        var DIR_POS = {
+          left: {
+            top: '0',
+            left: '-100%'
+          },
+          right: {
+            top: '0',
+            left: '100%'
+          },
+          bottom: {
+            top: '100%',
+            left: '0'
+          },
+          top: {
+            top: '-100%',
+            left: '0'
+          }
+        };
+
+        $('.antique_list li').each(function () {
+          new MouseDirection(this, {
+            enter: function ($element, dir) {
+              //每次进入前先把.trans类移除掉，以免后面调整位置的时候也产生过渡效果
+              var $content = $element.find('.mask').removeClass('trans');
+
+              //调整位置
+              $content.css(DIR_POS[dir]);
+
+              //reflow
+              $content[0].offsetWidth;
+
+              //启用过渡
+              $content.addClass('trans');
+
+              //滑入
+              $content.css({
+                left: '0',
+                top: '0'
+              });
+            },
+            leave: function ($element, dir) {
+              $element.find('.mask').css(DIR_POS[dir]);
+            }
+          });
+        });
+      </script>
+
+
+
+
+
 
 
       <!-- 2.1.3 博物馆活动 -->
@@ -429,25 +654,93 @@
       <!-- 2.1.4 底部导航 -->
       <div class="footer_nav clearfix">
         <ul>
-          <li class="li1"><a href="#"><img src="./img/footer_nav_1.1.png" alt="">
+          <li class="li1"><a href="#">
+              <div class="content">
+
+              </div>
+              <img src="./img/footer_nav_1.1.png" alt="">
               <p>图书馆</p>
             </a></li>
-          <li class="li2"><a href="#"><img src="./img/footer_nav_2.1.png" alt="">
+          <li class="li2"><a href="#">
+              <div class="content">
+
+              </div>
+              <img src="./img/footer_nav_2.1.png" alt="">
               <p>视听馆</p>
             </a></li>
-          <li class="li3"><a href="#"><img src="./img/footer_nav_3.1.png" alt="">
+          <li class="li3"><a href="#">
+              <div class="content">
+
+              </div>
+              <img src="./img/footer_nav_3.1.png" alt="">
               <p>数字文物库</p>
             </a></li>
-          <li class="li4"><a href="#"><img src="./img/footer_nav_2.2.png" alt="">
+          <li class="li4"><a href="#">
+              <div class="content">
+
+              </div>
+              <img src="./img/footer_nav_2.2.png" alt="">
               <p>全景故宫</p>
             </a></li>
-          <li class="li5"><a href="#"><img src="./img/footer_nav_3.2.png" alt="">
+          <li class="li5"><a href="#">
+              <div class="content">
+
+              </div>
+              <img src="./img/footer_nav_3.2.png" alt="">
               <p>V故宫</p>
             </a></li>
         </ul>
       </div>
     </div>
   </div>
+  <!-- mouse方向 -->
+  <script>
+    var DIR_POS = {
+      left: {
+        top: '0',
+        left: '-100%'
+      },
+      right: {
+        top: '0',
+        left: '100%'
+      },
+      bottom: {
+        top: '100%',
+        left: '0'
+      },
+      top: {
+        top: '-100%',
+        left: '0'
+      }
+    };
+    $('.footer_nav li').each(function () {
+      new MouseDirection(this, {
+        enter: function ($element, dir) {
+          //每次进入前先把.trans类移除掉，以免后面调整位置的时候也产生过渡效果
+          var $content = $element.find('.content').removeClass('trans');
+
+          //调整位置
+          $content.css(DIR_POS[dir]);
+
+          //reflow
+          $content[0].offsetWidth;
+
+          //启用过渡
+          $content.addClass('trans');
+
+          //滑入
+          $content.css({
+            left: '0',
+            top: '0'
+          });
+        },
+        leave: function ($element, dir) {
+          $element.find('.content').css(DIR_POS[dir]);
+        }
+      });
+    });
+  </script>
+
 
 
   <!-- 3. 底部 -->
@@ -475,7 +768,7 @@
       </div>
       <!-- 3.1.4 浏览建议-->
       <div class="btns">
-        <a href="#">浏览建议</a>
+        <a>浏览建议</a>
       </div>
       <!-- 3.1.5 二维码-->
       <div class="qr_code">
@@ -487,7 +780,7 @@
 
   <!-- 4. 固定定位导航栏 -->
   <div class="fix_nav">
-    <a href="#"><img src="./img/sidebar_gotop.png" alt="直达顶部"></a>
+    <a href="#" class="gotop"><img src="./img/sidebar_gotop.png" alt="直达顶部"></a>
     <div class="nav">
       <ul>
         <li><a href="#" class="season">
@@ -542,152 +835,257 @@
   </div>
 
 
-
-</body>
-<!-- 引入jquery -->
-<script src="./lib/jquery-1.12.4.js"></script>
-<script src="./lib/jquery.nicescroll.min.js"></script>
-
-<script>
-  // 移入导航显示三角形，移出后消失
-  $(".topnav_mean li").hover(
-    function () {
-      $(this).children("i").addClass("cur")
-      // console.log($(this).children("i"));
-    },
-    function () {
-      $(this).children("i").removeClass("cur")
-    }
-  );
-  // 点击搜索图标，显示和隐藏
-  $("#fdj").click(function () {
-    $(".search").toggle();
-  })
-  // 移到登录、版本图标后隐藏搜索
-  $(".login").mouseover(function () {
-    $(".search").hide();
-  })
-  $(".lang").mouseover(function () {
-    $(".search").hide();
-  })
-
-  // 固定导航栏伸缩
-  $(".close").click(function () {
-    $(this).toggleClass("up")
-  });
-
-  // $(".close").toggle(
-  //   function(){
-  //   $(".fix_nav .nav").css("height","0")}
-  // )
+  <!-- js操作 -->
+  <script>
+    // // 移入导航显示三角形，移出后消失
+    // $(".topnav_mean li").hover(
+    //   function () {
+    //     $(this).children("i").addClass("cur")
+    //     // console.log($(this).children("i"));
+    //   },
+    //   function () {
+    //     $(this).children("i").removeClass("cur")
+    //   }
+    // );
+    // 点击搜索图标，显示和隐藏
+    // $("#fdj").click(function () {
+    //   $(".search").toggle();
+    // })
+    // // 移到登录、版本图标后隐藏搜索
+    // $(".login").mouseover(function () {
+    //   $(".search").hide();
+    // });
+    // $(".lang").mouseover(function () {
+    //   $(".search").hide();
+    // });
 
 
-
-  // // 滚动条模拟
-  $(function () {
-    //	pc端调用窗口滚动条
-    if (isPC()) {
-      niceScroll();
-    }
-  })
-  //	判断客户端是否为PC
-  function isPC() {
-    var userAgentInfo = navigator.userAgent;
-    var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
-    var flag = true;
-    for (var v = 0; v < Agents.length; v++) {
-      if (userAgentInfo.indexOf(Agents[v]) > 0) {
-        flag = false;
-        break;
-      }
-    }
-    return flag;
-  };
-
-  //	窗口滚动条
-  function niceScroll() {
-    var htmlNs = $("html").niceScroll({
-      zindex: 9999,
-      cursorwidth: 10,
-      cursorborder: 0,
-      cursoropacitymin: 0.3,
-      cursoropacitymax: 0.8,
-      horizrailenabled: false
+    // 固定导航栏伸缩
+    // 方法一：
+    $(".close").click(function () {
+      $(this).toggleClass("up")
     });
-    htmlNs.cursor.css({
-      width: 5
-    });
-    var objNs = (htmlNs.ispage) ? htmlNs.rail : htmlNs.win;
-    objNs.hover(function () {
-      htmlNs.state = true;
-      htmlNs.cursor.stop().animate({
-        width: 10
-      }, 100);
-    }, function () {
-      if (htmlNs.rail.drag) {
-        htmlNs.cursor.css({
-          'opacity': '0.8'
-        });
-        return;
+    $('.close').click(function () {
+      if ($(this).hasClass('up')) {
+        $('.fix_nav ul').slideUp(300);
+      } else {
+        $('.fix_nav ul').slideDown(300);
       }
-      htmlNs.cursor.stop().animate({
+    });
+    // 方法二：
+    // $('.close').click(function () {
+    //   if (!$(this).hasClass('up')) {
+    //     $(this).addClass('up');
+    //     $('.fix_nav ul').slideUp(300);
+    //   } else {
+    //     $(this).removeClass('up');
+    //     $('.fix_nav ul').slideDown(300);
+    //   }
+    // });
+
+
+    //返回顶部
+    $(".gotop").click(function () {
+      //$($.browser.webkit?"body":"html").animate({scrollTop:0},400+$(window).scrollTop()*0.3);
+      $("html,body").animate({
+        scrollTop: 0
+      }, 400 + $(window).scrollTop() * 0.3);
+    });
+
+
+
+    // // 滚动条模拟
+    $(function () {
+      //	pc端调用窗口滚动条
+      if (isPC()) {
+        niceScroll();
+      }
+    })
+    //	判断客户端是否为PC
+    function isPC() {
+      var userAgentInfo = navigator.userAgent;
+      var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
+      var flag = true;
+      for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+          flag = false;
+          break;
+        }
+      }
+      return flag;
+    };
+
+    //	窗口滚动条
+    function niceScroll() {
+      var htmlNs = $("html").niceScroll({
+        zindex: 9999,
+        cursorwidth: 10,
+        cursorborder: 0,
+        cursoropacitymin: 0.3,
+        cursoropacitymax: 0.8,
+        horizrailenabled: false
+      });
+      htmlNs.cursor.css({
         width: 5
-      }, 100);
-    });
-    $(document).mouseup(function () {
-      if (htmlNs.state) {
-        htmlNs.state = false;
+      });
+      var objNs = (htmlNs.ispage) ? htmlNs.rail : htmlNs.win;
+      objNs.hover(function () {
+        htmlNs.state = true;
+        htmlNs.cursor.stop().animate({
+          width: 10
+        }, 100);
+      }, function () {
+        if (htmlNs.rail.drag) {
+          htmlNs.cursor.css({
+            'opacity': '0.8'
+          });
+          return;
+        }
         htmlNs.cursor.stop().animate({
           width: 5
         }, 100);
+      });
+      $(document).mouseup(function () {
+        if (htmlNs.state) {
+          htmlNs.state = false;
+          htmlNs.cursor.stop().animate({
+            width: 5
+          }, 100);
+        }
+      });
+    };
+
+
+    // 一. 滚动条滚动实现侧边栏的隐藏和显示
+    $(window).scroll(function () {
+      // 1.1 在事件中获取页面卷去的距离
+      var v = $(window).scrollTop();
+      // 1.2 如果页面卷去的距离大于等于200 就显示侧边栏， 否则隐藏侧边栏
+      if (v >= 985) {
+        $(".fix_nav").css({
+          "opacity": "1",
+          // "transition": "all 10s linear",
+          // "display": "block"
+        });
+      } else {
+        $(".fix_nav").css({
+          "opacity": "0",
+          // "transition": "all 10s linear",
+          // "display": "none"
+        });
       }
     });
-  };
 
 
-  // 滚轮到一定高度显示窗口固定定位导航栏
-  // $(window).on('mousewheel', function (event) {
-  //   console.log(event.deltaX, event.deltaY, event.deltaFactor);
-  // });
-
-  // $(function () {
-  //   //使用on监听滚轮事件
-  //   $('#cube').on('mousewheel', function (event) {
-  //     //输出滚轮事件响应结果
-  //     console.log(event.deltaX, event.deltaY, event.deltaFactor);
-  //     //上下滚动时让鼠标垂直移动
-  //     var newTop = $(this).position().top - event.deltaY + "px";
-  //     $(this).css("top", newTop);
-  //     //左右滚动时让鼠标水平移动
-  //     var newLeft = $(this).position().left + event.deltaX + "px";
-  //     $(this).css("left", newLeft);
-  //   });
-  // });
 
 
-  /*	等比自适应函数	*/
-  function autoHeight(obj, w, h) {
-    var per = w / h;
-    obj.css('height', obj.width() / per);
-  };
-  /*	等比缩放函数	*/
-  function autoScale(ele) {
-    var per;
-    if ($(window).width() < 320) {
-      per = 1;
-    }
-    if ($(window).width() >= 320 && $(window).width() <= 640) {
-      per = $(window).width() / 320;
-    }
-    if ($(window).width() > 640) {
-      per = 2;
-    }
-    ele.css({
-      '-webkit-transform': 'scale(' + per + ')',
-      '-moz-transform': 'scale(' + per + ')',
-      'transform': 'scale(' + per + ')'
-    });
-  };
-</script>
+    // // 一. 滚动条滚动实现侧边栏的隐藏和显示
+    // // 1. 给window注册scroll事件
+    // $(window).scroll(function () {
+    // 1.1 在事件中获取页面卷去的距离
+    // var v = $(window).scrollTop();
+    // 1.2 如果页面卷去的距离大于等于200 就显示侧边栏，否则隐藏侧边栏
+    // if (v >= 990) {
+    // $('.fix_nav').slideToggle(500);
+    // $('.fix_nav').animate(500);
+    // $('.fix_nav').show(500);
+
+
+    // } else {
+    // $('.fix_nav').slideToggle(500);
+    // $('.fix_nav').hide(500);
+    // }
+    // });
+    //   // 二. 通过滚动控制侧边栏选项是否选中
+    //   if (v >= $('.mei').offset().top) {
+    //     $('ul li').eq(3).addClass('current').siblings().removeClass('current');
+    //   } else if (v >= $('.fu').offset().top) {
+    //     $('ul li').eq(2).addClass('current').siblings().removeClass('current');
+    //   } else if (v >= $('.dian').offset().top) {
+    //     $('ul li').eq(1).addClass('current').siblings().removeClass('current');
+    //   } else if (v >= $('.jia').offset().top) {
+    //     $('ul li').eq(0).addClass('current').siblings().removeClass('current');
+    //   }
+    // });
+
+
+    // // 三. 点击楼梯实现动画滚动并且让对应的楼层在顶部显示
+    // // 1. 找到第一个li注册点击事件
+    // $('ul li').eq(0).click(function () {
+    //   // 1.2 获取家电距离文档的位置top，设定滚动条区域的动画
+    //   var v = $('.jia').offset().top;
+    //   // 若滚动条在窗口上时，如果设置动画时，元素不要用window，而用html,body来代替。原因是：动画内容只针对标签不断更改样式属性值。、
+    //   // 若不动画时，可以选择用window
+    //   $('html,body').animate({
+    //     scrollTop: v
+    //   });
+    //   // $(window).scrollTop(v);
+    // });
+
+    // $('ul li').eq(1).click(function () {
+    //   // 1.2 获取家电距离文档的位置top，设定滚动条区域的动画
+    //   var v = $('.dian').offset().top;
+    //   //$(window).scrollTop(v);
+    //   $('html,body').animate({
+    //     scrollTop: v
+    //   });
+    // });
+
+    // // 返回顶部
+    // $('.back').click(function () {
+    //   $('html,body').animate({
+    //     scrollTop: 0
+    //   });
+    // });
+
+
+    // 滚轮到一定高度显示窗口固定定位导航栏
+    // $(window).on('mousewheel', function (event) {  
+    // console.log(event.deltaX, event.deltaY, event.deltaFactor);
+    //   console.log(event.deltaX, -900, event.deltaFactor);
+    // });
+
+    // $(function () {
+    //使用on监听滚轮事件
+    // $('#cube').on('mousewheel', function (event) {
+    //   //输出滚轮事件响应结果
+    //   // console.log(event.deltaX, event.deltaY, event.deltaFactor);
+
+    //   //上下滚动时让鼠标垂直移动
+    //   var newTop = $(this).position().top - event.deltaY + "px";
+    //   $(this).css("top", newTop);
+    //   //左右滚动时让鼠标水平移动
+    //   var newLeft = $(this).position().left + event.deltaX + "px";
+    //   $(this).css("left", newLeft);
+    // });
+
+
+    /*	等比自适应函数	*/
+    function autoHeight(obj, w, h) {
+      var per = w / h;
+      obj.css('height', obj.width() / per);
+    };
+    /*	等比缩放函数	*/
+    function autoScale(ele) {
+      var per;
+      if ($(window).width() < 320) {
+        per = 1;
+      }
+      if ($(window).width() >= 320 && $(window).width() <= 640) {
+        per = $(window).width() / 320;
+      }
+      if ($(window).width() > 640) {
+        per = 2;
+      }
+      ele.css({
+        '-webkit-transform': 'scale(' + per + ')',
+        '-moz-transform': 'scale(' + per + ')',
+        'transform': 'scale(' + per + ')'
+      });
+    };
+  </script>
+
+</body>
+
 
 </html>

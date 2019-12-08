@@ -3,7 +3,7 @@
 }
 
 body {
-  height: 3666px;
+  /* height: 3666px; */
   line-height: 1.5;
   font-family: 微软雅黑, 'Heiti SC', 黑体, Arial;
 }
@@ -14,23 +14,130 @@ body {
 /* 1. 头部与轮播区域样式 */
 .topheader {
   height: 979px;
-  background: #ccc;
+  /* background: #ccc; */
   margin: 0 auto;
 }
 
 /* 头部轮播背景图 */
-.lb_images {
-  width: 100%;
-  /* height: 100%; */
-  /* 高度刚好为到轮播图 */
-  height: 979px;
-  position: relative;
-}
+/* .lb_images { */
+/* width: 100%; */
+/* height: 100%; */
+/* 高度刚好为到轮播图 */
+/* position: relative; */
+/* z-index: 333; */
+/* } */
+/* .lb_images ul li { */
+/* width: 1920px; */
+/* height: 979px; */
+/* overflow: hidden; */
+/* } */
+/* .lb_images img { */
+/* width: 100%; */
+/* height: 100%; */
+/* } */
 
-.lb_images {
+/* 动态：轮播:::: */
+.focus {
+  overflow: hidden;
   position: relative;
+  width: 100%;
   z-index: 333;
 }
+
+.focus ul {
+  overflow: hidden;
+  width: 9999px;
+  height: 100%;
+}
+
+.focus li {
+  float: left;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+
+.focus li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.focus .nav {
+  position: absolute;
+  left: 0;
+  bottom: 5%;
+  width: 100%;
+  text-align: center;
+}
+
+.focus .nav i {
+  display: inline-block;
+  width: 27px;
+  height: 24px;
+  margin: 0 5px;
+  line-height: 3px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background: url('../img/dian2.png') no-repeat left center;
+}
+
+.focus .nav i.now {
+  background-position: right center;
+}
+
+.focus .prev {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 10;
+}
+
+.focus .next {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 10;
+}
+
+.focus .prev a {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -40px;
+  width: 80px;
+  height: 80px;
+  background: url("../img/ld_prev.png") no-repeat center;
+  opacity: 0;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+
+}
+
+.focus .next a {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -40px;
+  width: 80px;
+  height: 80px;
+  background: url("../img/ld_next.png") no-repeat center;
+  opacity: 0;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+
+
+
+
+
+
 
 /* 头部栏 */
 .header {
@@ -1139,6 +1246,40 @@ path {
   overflow: hidden;
 }
 
+.antique_list li a {
+  padding: 50px 60px 0;
+  display: block;
+  color: #fff;
+  text-align: left;
+}
+
+.antique_list li p {
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+
+/*鼠标移入：文字介绍遮障::::: */
+.mask {
+  position: absolute;
+  z-index: 11;
+  background: url(../img/opacity-75.png);
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  top: -100%;
+  line-height: 18px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+}
+
+.mask.trans {
+  transition: all .6s ease;
+  backface-visibility: hidden;
+}
+
+
+
 
 
 /* 2.1.3 博物馆活动 */
@@ -1255,6 +1396,7 @@ path {
   width: 314px;
   height: 280px;
   position: relative;
+  overflow: hidden;
 }
 
 .footer_nav .li1 {
@@ -1279,25 +1421,54 @@ path {
 
 .footer_nav li img {
   width: 117px;
+  /* position: absolute;
+  left: 99px;
+  bottom: 84px; */
+  margin-top: 75px;
   margin-bottom: 8px;
+  position: relative;
+  z-index: 33;
 }
 
 .footer_nav li a {
   display: block;
   color: #fff;
   text-align: center;
+  width: 100%;
+  height: 100%;
 }
 
 .footer_nav li a {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 49px;
+  position: relative;
+
 }
 
 .footer_nav li p {
   font-size: 18px;
+  position: relative;
+  z-index: 33;
 }
+
+/*鼠标移入：遮障::::: */
+.content {
+  position: absolute;
+  z-index: 2;
+  background: url(../img/home_block4_bg2.jpg);
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  top: -100%;
+  line-height: 198px;
+  text-align: center;
+  /* color: #fff; */
+  /* font-size: 14px; */
+}
+
+.content.trans {
+  transition: all .6s ease;
+  backface-visibility: hidden;
+}
+
 
 
 
@@ -1476,8 +1647,18 @@ path {
 /* 4. 固定定位导航栏 */
 .fix_nav {
   position: fixed;
-  bottom: 102px;
+  bottom: 197px;
   right: 130px;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+
+.fix_nav .nav {
+  display: block;
+}
+
+.fix_nav .nav ul {
+  display: block;
 }
 
 .fix_nav .nav li {
@@ -1563,14 +1744,12 @@ path {
   height: 42px;
 }
 
-.fix_nav .close.up{
+.fix_nav .close.up {
   background: url(../img/sidebar_up.png) no-repeat;
 }
 
-.fix_nav p{
+.fix_nav p {
   background: url(../img/sidebar_up.png) no-repeat;
   min-width: 42px;
   height: 42px;
 }
-
-

@@ -1,0 +1,754 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* height: 2333px; */
+    color: #707070;
+    font-family: 微软雅黑, 'Heiti SC', 黑体, Arial;
+    font-size: 14px;
+}
+
+/* 1. 头部与轮播区域样式 */
+.topheader {
+    height: 49px;
+    border-bottom: 1px solid #e3e3e3;
+    margin: 0 auto;
+}
+
+
+/* 头部栏 */
+.header {
+    height: 48px;
+    /* background: #ccc; */
+    /* 首页、导航居中 */
+    text-align: center;
+    /* line-height: 48px; */
+
+}
+
+/* 故宫-登录Logo */
+.toplogo {
+    float: left;
+    width: 115px;
+    height: 100%;
+    text-align: left;
+    /* position: absolute;
+    top: 0;
+    left: 40px;*/
+}
+
+.toplogo a {
+    display: block;
+    line-height: 46px;
+}
+
+.toplogo img {
+    /* width: 138px; */
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+}
+
+/* 头部导航 */
+.topnav_mean {
+    float: left;
+    font-size: 0;
+    margin-left: 194px;
+}
+
+.topnav_mean li {
+    display: inline-block;
+    width: 80px;
+    height: 48px;
+    position: relative;
+    font-size: 14px;
+}
+
+.topnav_mean li>a {
+    display: inline-block;
+    /* padding: 12px 35px; */
+    line-height: 48px;
+    color: #474747;
+    width: 100%;
+}
+
+.topnav_mean li>a:hover {
+    color: #c2a680;
+}
+
+/* 导航栏 */
+/* 三角 */
+.topnav_mean li i {
+    display: block;
+    visibility: hidden;
+    width: 18px;
+    height: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -9px;
+}
+
+.topnav_mean li i img {
+    width: 100%;
+    height: 100%;
+}
+
+.topnav_mean li:hover i {
+    /* visibility: visible; */
+    transition: all .1s ease-in 0s;
+
+}
+
+/* jq控制添加的cur类名：显示三角形 */
+.topnav_mean li .cur {
+    visibility: visible;
+}
+
+/* 隐藏导航栏 */
+.topnav_mean .child {
+    position: absolute;
+    /* width: 1920px; */
+    width: 1903px;
+    text-align: left;
+    line-height: 50px;
+    overflow: hidden;
+    background: url(../img/black61.png);
+    /* background-color: rgb(157, 131, 94, 0.71); */
+    /* 过渡 */
+    /* transform: scale(1.001, 1.001);
+    transition: transform 1000ms linear 0s; */
+}
+
+/* c2 */
+.topnav_mean .c2 {
+    top: 48px;
+    left: -712px;
+    /* 初始隐藏 */
+    height: 0;
+}
+
+.topnav_mean .child p {
+    /* display: inline-block; */
+    float: left;
+    margin-right: 10px;
+}
+
+.topnav_mean .child strong {
+    color: #fff;
+    background: url(../img/img6.png) right 3px no-repeat;
+    padding-right: 15px;
+    margin-right: 8px;
+}
+
+.topnav_mean .child p:nth-last-child(1) strong {
+    margin: 0;
+    background: none;
+    padding: 0;
+}
+
+.topnav_mean .child a {
+    color: #fff;
+    font-weight: normal;
+    margin-right: 10px;
+    vertical-align: bottom;
+}
+
+.topnav_mean .child a:hover {
+    color: #c2a680;
+}
+
+/* 鼠标移入显示 */
+.topnav_mean li:hover .child {
+    display: block;
+    height: 50px;
+    /* 过渡 */
+    transition: all .25s ease-out 0s;
+}
+
+
+/* c3 */
+.topnav_mean .c3 {
+    top: 48px;
+    left: -792px;
+    /* 初始隐藏 */
+    height: 0;
+}
+
+/* c4 */
+.topnav_mean .c4 {
+    top: 48px;
+    left: -892px;
+    /* 初始隐藏 */
+    height: 0;
+}
+
+/* c5 */
+.topnav_mean .c5 {
+    top: 48px;
+    left: -952px;
+    /* 初始隐藏 */
+    height: 0;
+}
+
+/* c6 */
+.topnav_mean .c6 {
+    top: 48px;
+    left: -1032px;
+    /* 初始隐藏 */
+    height: 0;
+}
+
+/* c7 */
+.topnav_mean .c7 {
+    top: 48px;
+    left: -1112px;
+    /* 初始隐藏 */
+    height: 0;
+}
+
+/* c8 */
+.topnav_mean .c8 {
+    top: 48px;
+    left: -1192px;
+    /* 初始隐藏 */
+    height: 0;
+}
+
+
+/* 头部右边工具栏 */
+.topnav-r {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.topnav-r ul {
+    float: left;
+    padding-top: 17px;
+}
+
+.topnav-r li {
+    float: left;
+    width: 15px;
+    height: 16px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.topnav-r li a {
+    position: relative;
+    display: block;
+    color: #474747;
+    height: 16px;
+    font-size: 16px;
+    line-height: 20px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.topnav-r li:hover a {
+    opacity: 0.8;
+}
+
+.topnav-r li img {
+    width: 15px;
+}
+
+.topnav-r li.login {
+    width: 40px;
+    height: 20px;
+}
+
+.topnav-r li.login a {
+    position: relative;
+    z-index: 111;
+}
+
+.topnav-r li.login:hover img {
+    margin-top: -18px;
+}
+
+.topnav-r li.lang {
+    width: 40px;
+    height: 20px;
+}
+
+.topnav-r li.lang a {
+    position: relative;
+    z-index: 111;
+}
+
+.topnav-r li.lang:hover img {
+    margin-top: -20px;
+}
+
+.topnav-r li.scbtn {
+    width: 40px;
+    height: 20px;
+}
+
+.topnav-r li.scbtn a {
+    position: relative;
+    z-index: 111;
+}
+
+.topnav-r li.scbtn img {}
+
+.topnav-r li.scbtn:hover img {
+    margin-top: -20px;
+}
+
+.topnav-r .tools li {
+    height: 16px;
+    padding-left: 9px;
+    margin-left: 20px;
+    border-left: 1px solid #ddd;
+    /* 阻止无法实现内边距效果 */
+    box-sizing: content-box;
+}
+
+.topnav-r .tools li:nth-child(1) {
+    border: 0;
+    margin: 0;
+}
+
+.topnav-r .tools li a {
+    padding-right: 13px;
+    width: 41px;
+}
+
+/* 右边工具三角形 */
+.topnav-r .tools li a:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 3px solid transparent;
+    border-top: 5px solid #909090;
+    position: absolute;
+    right: 0;
+    top: 6px;
+}
+
+/* 菜单 */
+.topnav-r>a {
+    float: left;
+    display: block;
+    width: 34px;
+    height: 34px;
+    overflow: hidden;
+}
+
+.topnav-r .menutool {
+    margin-top: 8px;
+    margin-left: 21px;
+}
+
+.topnav-r>a img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+}
+
+.topnav-r .menutool:hover img {
+    margin-top: -33.8px;
+}
+
+/* 工具栏隐藏栏 */
+.topnav-r .tools .loginbox {
+    background: url(../img/login-box1.png) no-repeat 0 bottom;
+    width: 80px;
+    height: 70px;
+    position: absolute;
+    top: 2px;
+    left: -2px;
+    z-index: 4;
+    padding-top: 35px;
+    padding-left: 0.6px;
+    box-sizing: content-box;
+    /* 初始隐藏--登录注册 */
+    display: none;
+}
+
+
+.topnav-r .tools .language {
+    background: url(../img/login-box1.png) no-repeat 0 bottom;
+    width: 80px;
+    height: 70px;
+    position: absolute;
+    top: 2px;
+    left: 7px;
+    z-index: 3;
+    padding-top: 35px;
+    padding-left: 0.9px;
+    box-sizing: content-box;
+    /* 初始隐藏--版本切换 */
+    display: none;
+}
+
+.topnav-r .tools .a {
+    display: block;
+    height: 34px;
+    line-height: 34px;
+    font-size: 14px;
+    color: #474747;
+    cursor: pointer;
+}
+
+.topnav-r .tools .a:hover {
+    color: #c2a680;
+}
+
+.topnav-r .login:hover .loginbox,
+.topnav-r .lang:hover .language {
+    display: block;
+}
+
+
+/* 搜索框 */
+.topnav-r .tools .search {
+    background: url(../img/search1.png) no-repeat center bottom;
+    width: 280px;
+    height: 80px;
+    padding-top: 40px;
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: -1px;
+    z-index: 2;
+}
+
+.topnav-r .search .keyword_search {
+    background: none;
+    border: none;
+    width: 240px;
+    height: 100%;
+    line-height: 40px;
+    height: 40px;
+    font-size: 14px;
+    padding: 0 11px;
+    padding-top: 1px;
+    color: #474747;
+    float: left;
+}
+
+.topnav-r .search .ok {
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    float: left;
+    cursor: pointer;
+}
+
+
+
+/* 2. 浏览器路径 */
+.win_path {
+    height: 70px;
+}
+
+.win_path .container_login {
+    padding-top: 17px;
+}
+
+.win_path a {
+    margin: 0 10px;
+    color: #707070;
+}
+
+.win_path a:nth-child(1) {
+    margin-left: 0;
+}
+
+
+
+/* 3. 登录会员账号 */
+#login-form {}
+
+.login_zh {
+    background: url(../img/bg17.jpg) center top no-repeat;
+    height: 645px;
+    margin: 20px 0 45px;
+}
+
+.login_zh .wrap {
+    width: 1258px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.login_zh .title2 {
+    color: #fff;
+    padding-top: 190px;
+}
+
+.title2 {
+    text-align: center;
+    font-size: 26px;
+    line-height: 1.2;
+}
+
+.login_zh .tit-span {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+    line-height: 1;
+}
+
+.login_zh .tit-span img {
+    height: 32px;
+    width: 22px;
+    vertical-align: middle;
+}
+
+.login_zh .tit {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    margin-top: -1px;
+}
+
+.login_zh .box {
+    margin: 30px auto 0;
+    width: 385px;
+}
+
+/* 输入框、、 */
+.login_zh .box .input {
+    background: url(../img/input1.png) left center no-repeat;
+    width: 385px;
+    height: 40px;
+    margin-top: 12px;
+    position: relative;
+}
+
+.login_zh .box .input input {
+    width: 345px;
+    margin-left: 20px;
+    color: #fff;
+    line-height: 40px;
+    font-size: 14px;
+    height: 40px;
+    border: 0;
+    background: none;
+}
+
+.login_zh .box .input.yz {
+    background: url(../img/input2.png) left center no-repeat;
+}
+
+.login_zh .box .input.yz input {
+    float: left;
+    width: 243px;
+}
+
+.login_zh .box .input.yz a {
+    display: block;
+    background: url(../img/yzm.png) no-repeat center;
+    background-size: 90px 40px;
+    width: 90px;
+    height: 40px;
+}
+
+.login_zh .box .input.yz .pic {
+    float: right;
+    width: 90px;
+    height: 40px;
+}
+
+
+.login_zh .box .btn {
+    display: block;
+    /* background: url(../image/bo/btn5.png) center center no-repeat; */
+    width: 158px;
+    height: 40px;
+    text-align: center;
+    margin: 54px 0 0 66px;
+    float: left;
+    color: #fff;
+    font-size: 16px;
+    line-height: 40px;
+    position: relative;
+}
+
+.login_zh .box .no {
+    color: fff;
+    float: left;
+    margin: 54px 0 0 21px;
+    text-decoration: underline;
+    font-size: 14px;
+    line-height: 40px;
+    color: #fff;
+}
+
+
+
+/* 4. 底部 */
+.bottom {
+    height: 197px;
+    margin-top: 30px;
+    color: #fff;
+    background: #272727;
+    text-align: center;
+    font-size: 14px;
+}
+
+.bottom {
+    padding-top: 30px;
+    padding-bottom: 27px;
+    line-height: 1.5;
+}
+
+.bottom a {
+    color: #fff;
+}
+
+
+/* 4.1.1 网站访问量 */
+.bottom .num {}
+
+.bottom .num span {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.bottom .num i {
+    display: inline-block;
+    width: 20px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    background: #404040;
+    margin: 0 3px;
+}
+
+/* 4.1.2 底部导航 */
+.bottom_nav {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.bottom_nav a {
+    /* padding: 0 6px; */
+}
+
+/* 4.1.3 版权 */
+.copyright {
+    margin-top: 5px;
+}
+
+/* 4.1.4 浏览建议 */
+.bottom .btns {
+    margin-top: 15px;
+}
+
+.bottom .btns a {
+    display: inline-block;
+    height: 30px;
+    line-height: 26px;
+    border: 1px solid #ddd;
+    padding: 0 10px;
+}
+
+
+/* 4.1.5 二维码 */
+.bottom .qr_code {
+    position: absolute;
+    top: 35px;
+    right: 388px;
+    z-index: 520;
+}
+
+.bottom .qr_code a {
+    position: relative;
+    display: block;
+}
+
+.qr_code a::after {
+    content: "";
+    background: url(../img/ico_hand2.png) no-repeat;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    bottom: -10px;
+    right: -9px;
+
+    animation: finger 3s linear 0s infinite;
+    /* -webkit 私有chrome、 safari*/
+    -webkit-animation: finger 3s linear 0s infinite;
+}
+
+/* 律动起来~ */
+@keyframes finger {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    10% {
+        transform: translate(5px, 5px);
+    }
+
+    20% {
+        transform: translate(0, 0);
+    }
+
+    30% {
+        transform: translate(5px, 5px);
+    }
+
+    40% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@-webkit-keyframes finger {
+    0% {
+        -webkit-transform: translate(0, 0);
+    }
+
+    10% {
+        -webkit-transform: translate(5px, 5px);
+    }
+
+    20% {
+        -webkit-transform: translate(0, 0);
+    }
+
+    30% {
+        -webkit-transform: translate(5px, 5px);
+    }
+
+    40% {
+        -webkit-transform: translate(0, 0);
+    }
+
+    100% {
+        -webkit-transform: translate(0, 0);
+    }
+}
+
+
+.qr_code a::before {
+    content: "";
+    background: url(../img/QR_code.jpg) no-repeat top;
+    width: 282px;
+    height: 448px;
+    position: absolute;
+    bottom: 58px;
+    left: -122px;
+    cursor: auto;
+    /* 初始隐藏 */
+    display: none;
+}
+
+.qr_code:hover a::before {
+    display: block;
+}
