@@ -119,6 +119,7 @@ body {
     /* 过渡 */
     /* transform: scale(1.001, 1.001);
     transition: transform 1000ms linear 0s; */
+    z-index: 2;
 }
 
 /* c2 */
@@ -456,12 +457,14 @@ body {
 .win_path a {
     margin: 0 10px;
     color: #707070;
+
 }
 
 .win_path a:nth-child(1) {
     margin-left: 0;
 }
 
+win_path .path {}
 
 
 /* 3. 登录会员账号 */

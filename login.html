@@ -119,8 +119,6 @@
                     );
 
 
-
-
                     // 头部导航hover颜色
                     $(".topnav_mean i").hover(
                         function () {
@@ -147,7 +145,7 @@
                         <li class="login">
                             <a href="#"><img src="./img/ico_tools_search.png" alt="登录注册"></a>
                             <div class="loginbox">
-                                <span class="a" onclick="window.location.href='/login.html'">登录</span>
+                                <span class="a" onclick="window.location.href='./login.html'">登录</span>
                                 <span class="a">注册</span>
                             </div>
                         </li>
@@ -189,9 +187,11 @@
     <!-- 2. 浏览器路径 -->
     <div class="win_path">
         <!-- 2.1 版心 -->
-        <div class="container_login">
+        <div class="container_login" style="z-index: 1;">
             <!-- 2.2 路径 -->
-            <a href="index.html">首页</a>»<a href="login.html">登录</a>
+            <div class="path">
+                <a href="index.html">首页</a>»<a href="login.html">登录</a>
+            </div>
         </div>
     </div>
 </body>
