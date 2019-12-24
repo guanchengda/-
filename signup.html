@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./lib/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/signup.css">
+    <script src="./lib/jquery-1.12.4.js"></script>
+</head>
+
+<body>
+    <!-- 1. 头部导航 -->
+    <div class="topheader">
+        <!-- 1.1 版心 -->
+        <div class="container_login clearfix">
+            <div class="header clearfix">
+                <div class="toplogo"><a href="index.html"><img src="./img/login_logo.png" alt="故宫logo"></a></div>
+                <!-- 头部导航 -->
+                <ul class="topnav_mean">
+                    <li><a href="./index.html">首页</a></li>
+                    <li><a href="#">导览</a>
+                        <i class=""><img src="./img/arrow1.png" alt="隐藏导航栏三角"></i>
+                        <div class="child c2" style="padding-left: 526px;">
+                            <p><strong> <a href="#">开放时间</a> </strong></p>
+                            <p><strong> <a href="#">票务服务</a> </strong></p>
+                            <p><strong> <a href="#">交通路线</a> </strong></p>
+                            <p><strong> <a href="#">游览须知</a> </strong></p>
+                            <p><strong> <a href="#" target="_blank">全景故宫</a> </strong></p>
+                        </div>
+                    </li>
+                    <li><a href="#">展览</a><i class=""><img src="./img/arrow1.png" alt="隐藏导航栏三角"></i>
+                        <div class="child c3" style="padding-left: 669px;">
+                            <p><strong> <a href="#">近期展览</a> </strong></p>
+                            <p><strong> <a href="#">专馆</a> </strong></p>
+                            <p><strong> <a href="#">原状成列</a> </strong></p>
+                            <p><strong> <a href="#">赴外展览</a> </strong></p>
+                        </div>
+                    </li>
+                    <li><a href="#">教育</a><i class=""><img src="./img/arrow1.png" alt="隐藏导航栏三角"></i>
+                        <div class="child c4" style="padding-left: 685px;">
+                            <p><strong> <a href="#">教育新闻</a> </strong></p>
+                            <p><strong> <a href="#">故宫博物院教育中心</a> </strong></p>
+                            <p><strong> <a href="#">国际博协培训中心</a> </strong></p>
+                            <p><strong> <a href="#">故宫志愿者</a> </strong></p>
+                        </div>
+                    </li>
+                    <li><a href="#">探索</a><i class=""><img src="./img/arrow1.png" alt="隐藏导航栏三角"></i>
+                        <div class="child c5" style="padding-left: 603px;">
+                            <p><strong> <a href="#">建筑</a> </strong></p>
+                            <p><strong> <a href="#">藏品</a> </strong></p>
+                            <p><strong> <a href="#">古籍</a> </strong></p>
+                            <p><strong> <a href="#">宫廷历史</a> </strong></p>
+                            <p><strong> <a href="#">文物医院</a> </strong></p>
+                            <p><strong> <a href="#">文化专题</a> </strong></p>
+                            <p><strong> <a href="#" target="_blank">名画记</a> </strong></p>
+                            <p><strong> <a href="#" target="_blank">数字多宝阁</a> </strong></p>
+                            <p><strong> <a href="#" target="_blank">数字文物库</a> </strong></p>
+                        </div>
+                    </li>
+                    <li><a href="#">学术</a><i class=""><img src="./img/arrow1.png" alt="隐藏导航栏三角"></i>
+                        <div class="child c6" style="padding-left: 754px;">
+                            <p><strong> <a href="#">学术资讯</a> </strong></p>
+                            <p><strong> <a href="#">专家名录</a> </strong></p>
+                            <p><strong> <a href="#">故宫研究院</a> </strong></p>
+                            <p><strong> <a href="#">故宫学院</a> </strong></p>
+                            <p><strong> <a href="#">其他学术机构</a> </strong></p>
+                            <p><strong> <a href="#">故宫博物院院刊</a> </strong></p>
+                        </div>
+                    </li>
+                    <li><a href="#">文创</a><i class=""><img id="aw1" src="./img/arrow1.png" alt="隐藏导航栏三角"></i>
+                        <div class="child c7" style="padding-left: 926px;">
+                            <p><strong> <a href="#">故宫出版</a> </strong></p>
+                            <p><strong> <a href="#">文创产品</a> </strong></p>
+                            <p><strong> <a href="#">故宫壁纸</a> </strong></p>
+                            <p><strong> <a href="#">故宫APP</a> </strong></p>
+                            <p><strong> <a href="#" target="_blank">故宫游戏</a> </strong></p>
+                        </div>
+                    </li>
+                    <li><a href="#">关于</a><i class=""><img id="aw1" src="./img/arrow1.png" alt="隐藏导航栏三角"></i>
+                        <div class="child c8" style="padding-left: 1005px;">
+                            <p><strong> <a href="#">总说</a> </strong></p>
+                            <p><strong> <a href="#">领导</a> </strong></p>
+                            <p><strong> <a href="#">资讯</a> </strong></p>
+                            <p><strong> <a href="#">院史编年</a> </strong></p>
+                            <p><strong> <a href="#">景仁榜</a> </strong></p>
+                            <p><strong> <a href="#">机构设置</a> </strong></p>
+                        </div>
+                    </li>
+                </ul>
+                <script>
+                    // 移入导航显示三角形，移出后消失
+                    $(".topnav_mean li").hover(
+                        function () {
+                            $(this).children("i").addClass("cur")
+                            // console.log($(this).children("i"));
+                        },
+                        function () {
+                            $(this).children("i").removeClass("cur")
+                        }
+                    );
+                    // 移入导航显示
+                    $(".topnav_mean i").hover(
+                        function () {
+                            $(this).parent().children("child").css("display", "block")
+
+                        },
+                        function () {
+                            $(this).parent().children("child").css("display", "block")
+
+                        }
+                    );
+
+
+                    // 头部导航hover颜色
+                    $(".topnav_mean i").hover(
+                        function () {
+                            $(this).parent().children('a').css("color", "#c2a680")
+                        },
+                        function () {
+                            $(this).parent().children('a').css("color", "")
+                        }
+                    );
+                    // 头部导航hover颜色
+                    $(".topnav_mean .child").hover(
+                        function () {
+                            $(this).parent().children('a').css("color", "#c2a680")
+                        },
+                        function () {
+                            $(this).parent().children('a').css("color", "")
+                        }
+                    );
+                </script>
+
+                <!-- 头部右边工具栏 -->
+                <div class="topnav-r clearfix">
+                    <ul class="tools">
+                        <li class="login">
+                            <a href="#"><img src="./img/ico_tools_search.png" alt="登录注册"></a>
+                            <div class="loginbox">
+                                <span class="a" onclick="window.location.href='./login.html'">登录</span>
+                                <span class="a">注册</span>
+                            </div>
+                        </li>
+                        <li class="lang">
+                            <a href="#"><img src="./img/zhong1.png" alt="版本切换"></a>
+                            <div class="language">
+                                <span class="a">EN</span>
+                                <span class="a">青少版</span>
+                            </div>
+                        </li>
+
+                        <li class="scbtn">
+                            <a href="#" id="fdj"><img src="./img/ico_tools_user.png" alt="搜索"></a>
+                            <div class="search">
+                                <input type="text" class="keyword_search" value="搜索关键词..."
+                                    onfocus="if(this.value='搜索关键词...'){this.value=''}"
+                                    onblur="if(this.value==''){this.value='搜索关键词...'}">
+                                <!-- <input type="text" class="keyword_search" value="搜索关键词..."
+                                onfocus="if(this.value=='搜索关键词...'){this.value=''}"
+                                onblur="if(this.value=''){this.value='搜索关键词...'}"> -->
+                                <button class="ok"></button>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- 三横杠 -->
+                    <a href="#" class="menutool"><img src="./img/menu2-1.png" alt=""></a>
+                </div>
+                <script>
+                    // 点击搜索图标，显示和隐藏
+                    $("#fdj").click(function () {
+                        $(".search").toggle();
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. 浏览器路径 -->
+    <div class="win_path">
+        <!-- 2.1 版心 -->
+        <div class="container_login" style="z-index: 1;">
+            <!-- 2.2 路径 -->
+            <div class="path">
+                <a href="index.html">首页</a>»<a href="login.html">注册</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- 3.注册前导语 -->
+<div class="regist1">
+    <h1>【成为故宫会员，感受故宫的庄严与肃静】</h1>
+    <div class="p">
+        <p>欢迎您来到“我的博物馆”，在这里注册之后即可成为故宫博物院的网络会员，享受故宫网站为您提供的一系列服务，包括：</p>
+        <p>（一）在故宫网站建立“我的博物馆”，定制自己喜爱的版块、栏目和内容，搭建完全属于自己的个性博物馆网站；</p>
+        <p>（二）订阅免费的故宫博物院电子报，了解院内最新展览消息和其他资讯；</p>
+        <p>（三）参与故宫网站的在线调查，让故宫博物院为您提供更好的服务；</p>
+        <p>您所填的个人材料受到故宫博物院网站的保护。（阅读《故宫博物院使用条款》）</p>
+    </div>
+</div>
+
+
+
+<!-- 4.注册信息 -->
+
+
+
+
+
+
+
+
+
+<!-- 5. 底部（最后添加）-->
+
+</body>
+
+</html>

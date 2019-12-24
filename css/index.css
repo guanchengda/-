@@ -1647,7 +1647,7 @@ path {
 /* 4. 固定定位导航栏 */
 .fix_nav {
   position: fixed;
-  bottom: 197px;
+  bottom: 195px;
   right: 130px;
   opacity: 0;
   transition: all 0.2s linear;
@@ -1736,7 +1736,6 @@ path {
 }
 
 /* 缩小 */
-
 
 .fix_nav .close {
   background: url(../img/sidebar_close.png) no-repeat;
