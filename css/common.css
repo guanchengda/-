@@ -5,9 +5,9 @@
     margin: 0 auto;
 }
 
- 
-/* 登录子页面 版心 */
-.container_login{
+
+/* 故宫子页面 版心 */
+.container_subpage {
     position: relative;
     width: 1258px;
     margin: 0 auto;
@@ -28,4 +28,11 @@
 
 .clearfix {
     *zoom: 1;
+}
+
+
+/* 网页划字样式 */
+::selection {
+    color: #fff;
+    background: #9d8540;
 }

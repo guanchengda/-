@@ -20,7 +20,7 @@
     <!-- 1. 头部导航 -->
     <div class="topheader">
         <!-- 1.1 版心 -->
-        <div class="container_login clearfix">
+        <div class="container_subpage clearfix">
             <div class="header clearfix">
                 <div class="toplogo"><a href="index.html"><img src="./img/login_logo.png" alt="故宫logo"></a></div>
                 <!-- 头部导航 -->
@@ -91,7 +91,7 @@
                             <p><strong> <a href="#">资讯</a> </strong></p>
                             <p><strong> <a href="#">院史编年</a> </strong></p>
                             <p><strong> <a href="#">景仁榜</a> </strong></p>
-                            <p><strong> <a href="#">机构设置</a> </strong></p>
+                            <p><strong> <a href="organization.html">机构设置</a> </strong></p>
                         </div>
                     </li>
                 </ul>
@@ -146,7 +146,7 @@
                             <a href="#"><img src="./img/ico_tools_search.png" alt="登录注册"></a>
                             <div class="loginbox">
                                 <span class="a" onclick="window.location.href='./login.html'">登录</span>
-                                <span class="a">注册</span>
+                                <span class="a" onclick="window.location.href='./signup.html'">注册</span>
                             </div>
                         </li>
                         <li class="lang">
@@ -187,7 +187,7 @@
     <!-- 2. 浏览器路径 -->
     <div class="win_path">
         <!-- 2.1 版心 -->
-        <div class="container_login" style="z-index: 1;">
+        <div class="container_subpage" style="z-index: 1;">
             <!-- 2.2 路径 -->
             <div class="path">
                 <a href="index.html">首页</a>»<a href="login.html">登录</a>
@@ -216,23 +216,33 @@
                 <!-- 密码 -->
                 <div class="input">
                     <input class="down1" type="text" value="密码" onblur="if($(this).val()=='')$(this).val('密码')"
-                        onfocus="if($(this).val()=='密码')$(this).val('')" autocomplete="off">
+                        onfocus="if($(this).val()=='密码')$(this).val('')">
                     <input name="pwd" class="validate[required]" data-prompt-position="topRight:0,-40" type="password"
                         autocomplete="off">
                 </div>
+                <script>
+                    // 点击密码框，隐藏“密码”
+                    $(".down1").click(function () {
+                        $(".down1").hide();
+                    })
+                </script>
                 <!-- 验证码 -->
                 <div class="input yz">
                     <input name="verify_img" class="validate[required]" data-validation-placeholder="验证码" type="text"
                         value="验证码" onblur="if($(this).val()=='')$(this).val('验证码')"
                         onfocus="if($(this).val()=='验证码')$(this).val('')">
-                    <div class="pic"><a><img id="verify2" width="90" height="40"
-                                src="/Site/Passport/verify/type/login.html"></a></div>
+                    <div class="pic"><a>
+                            <!-- <img id="verify2" width="90" height="40" src="/Site/Passport/verify/type/login.html"> -->
+                        </a></div>
                 </div>
                 <!-- 点击登录 -->
                 <input type="hidden" name="gobackurl" value="">
-                <a style="margin:54px 0 0 0;" class="btn btn-new" href="javascript:;">登&nbsp;&nbsp;录<div id="line0"
-                        class="lines-btn" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;">
-                        <!-- svg -->
+                <a style="margin:54px 0 0 0;" class="link" href="javascript:;">登&nbsp;&nbsp;录
+                    <div id="line0" class="lines-btn"
+                        style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;">
+                        <!-- svg：lib -->
+                        <!-- svg：lib-->
+                        <!-- svg：lib-->
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="158" height="40"
                             style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); left: 0px;">
                             <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with
@@ -243,9 +253,11 @@
                                 stroke-width="2" stroke-dasharray="1000,1000"
                                 style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); stroke-width: 2;">
                             </path>
-                        </svg></div></a>
+                        </svg>
+                    </div>
+                </a>
                 <a style="text-decoration: none;" class="no" href="#">还未注册？</a>
-                <a style="position: absolute;margin:64px 0 0 10px; color:#fff;" class="no2" href="#">忘记密码？</a>
+                <a style="position: absolute;margin:67px 0 0 10px; color:#fff;" class="no2" href="#">忘记密码？</a>
             </div>
         </div>
     </div>
@@ -286,5 +298,6 @@
         </div>
     </div>
 </div>
+</body>
 
 </html>

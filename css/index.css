@@ -1218,7 +1218,8 @@ path {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   stroke-width: 2;
   stroke-dashoffset: 0px;
-  stroke-dasharray: 500, 500
+  stroke-dasharray: 500, 500;
+  transition: all 1s;
 }
 
 .link:hover path {
@@ -1227,7 +1228,6 @@ path {
   stroke-dashoffset: -1000px;
   stroke-dasharray: 500, 500;
   transition: stroke-dashoffset 500ms 2 ease 0s，stroke-dasharray 500ms ease 0s;
-  transition: all 1s;
 }
 
 .count_library a:hover {

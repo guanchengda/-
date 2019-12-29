@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <!--<meta name="viewport" content="width=device-width,initial-scale=0.8,minimum-scale=0.8,maximum-scale=1.0,user-scalable=no,minimal-ui" />-->
+    <title>领导 - 故宫博物院</title>
+    <meta name="keywords" content="故宫博物院,故宫" />
+    <meta name="description"
+        content="北京故宫博物院建立于1925年10月10日，位于北京故宫紫禁城内。是在明朝、清朝两代皇宫及其收藏的基础上建立起来的中国综合性博物馆，也是中国最大的古代文化艺术博物馆，其文物收藏主要来源于清代宫中旧藏，是第一批全国爱国主义教育示范基地。" />
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./lib/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/leader_list.css">
+    <script src="./lib/jquery-1.12.4.js"></script>
+</head>
+
+<body>
+    <!-- 1. 头部导航 -->
+    <div class="topheader">
+        <!-- 1.1 版心 -->
+        <div class="container_subpage clearfix">
+            <div class="header clearfix">
+                <div class="toplogo"><a href="index.html"><img src="./img/login_logo.png" alt="故宫logo"></a></div>
+                <!-- 头部导航 -->
+                <ul class="topnav_mean">
+                    <li><a href="./index.html">首页</a></li>
+                    <li><a href="#">导览</a>
+                        <i class=""><img src="./img/arrow1.png" alt="隐藏导航栏三角"></i>
+                        <div class="child c2" style="padding-left: 526px;">
+                            <p><strong> <a href="#">开放时间</a> </strong></p>
+                            <p><strong> <a href="#">票务服务</a> </strong></p>
+                            <p><strong> <a href="#">交通路线</a> </strong></p>
+                            <p><strong> <a href="#">游览须知</a> </strong></p>
+                            <p><strong> <a href="#" target="_blank">全景故宫</a> </strong></p>
+                        </div>
+                    </li>
+                    <li><a href="#">展览</a><i class=""><img src="./img/arrow1.png" alt="隐藏导航栏三角"></i>
+                        <div class="child c3" style="padding-left: 669px;">
+                            <p><strong> <a href="#">近期展览</a> </strong></p>
+                            <p><strong> <a href="#">专馆</a> </strong></p>
+                            <p><strong> <a href="#">原状成列</a> </strong></p>
+                            <p><strong> <a href="#">赴外展览</a> </strong></p>
+                        </div>
+                    </li>
+                    <li><a href="#">教育</a><i class=""><img src="./img/arrow1.png" alt="隐藏导航栏三角"></i>
+                        <div class="child c4" style="padding-left: 685px;">
+                            <p><strong> <a href="#">教育新闻</a> </strong></p>
+                            <p><strong> <a href="#">故宫博物院教育中心</a> </strong></p>
+                            <p><strong> <a href="#">国际博协培训中心</a> </strong></p>
+                            <p><strong> <a href="#">故宫志愿者</a> </strong></p>
+                        </div>
+                    </li>
+                    <li><a href="#">探索</a><i class=""><img src="./img/arrow1.png" alt="隐藏导航栏三角"></i>
+                        <div class="child c5" style="padding-left: 603px;">
+                            <p><strong> <a href="#">建筑</a> </strong></p>
+                            <p><strong> <a href="#">藏品</a> </strong></p>
+                            <p><strong> <a href="#">古籍</a> </strong></p>
+                            <p><strong> <a href="#">宫廷历史</a> </strong></p>
+                            <p><strong> <a href="#">文物医院</a> </strong></p>
+                            <p><strong> <a href="#">文化专题</a> </strong></p>
+                            <p><strong> <a href="#" target="_blank">名画记</a> </strong></p>
+                            <p><strong> <a href="#" target="_blank">数字多宝阁</a> </strong></p>
+                            <p><strong> <a href="#" target="_blank">数字文物库</a> </strong></p>
+                        </div>
+                    </li>
+                    <li><a href="#">学术</a><i class=""><img src="./img/arrow1.png" alt="隐藏导航栏三角"></i>
+                        <div class="child c6" style="padding-left: 754px;">
+                            <p><strong> <a href="#">学术资讯</a> </strong></p>
+                            <p><strong> <a href="#">专家名录</a> </strong></p>
+                            <p><strong> <a href="#">故宫研究院</a> </strong></p>
+                            <p><strong> <a href="#">故宫学院</a> </strong></p>
+                            <p><strong> <a href="#">其他学术机构</a> </strong></p>
+                            <p><strong> <a href="#">故宫博物院院刊</a> </strong></p>
+                        </div>
+                    </li>
+                    <li><a href="#">文创</a><i class=""><img id="aw1" src="./img/arrow1.png" alt="隐藏导航栏三角"></i>
+                        <div class="child c7" style="padding-left: 926px;">
+                            <p><strong> <a href="#">故宫出版</a> </strong></p>
+                            <p><strong> <a href="#">文创产品</a> </strong></p>
+                            <p><strong> <a href="#">故宫壁纸</a> </strong></p>
+                            <p><strong> <a href="#">故宫APP</a> </strong></p>
+                            <p><strong> <a href="#" target="_blank">故宫游戏</a> </strong></p>
+                        </div>
+                    </li>
+                    <li><a href="#">关于</a><i class=""><img id="aw1" src="./img/arrow1.png" alt="隐藏导航栏三角"></i>
+                        <div class="child c8" style="padding-left: 1005px;">
+                            <p><strong> <a href="#">总说</a> </strong></p>
+                            <p><strong> <a href="#">领导</a> </strong></p>
+                            <p><strong> <a href="#">资讯</a> </strong></p>
+                            <p><strong> <a href="#">院史编年</a> </strong></p>
+                            <p><strong> <a href="#">景仁榜</a> </strong></p>
+                            <p><strong> <a href="organization.html">机构设置</a> </strong></p>
+                        </div>
+                    </li>
+                </ul>
+                <script>
+                    // 移入导航显示三角形，移出后消失
+                    $(".topnav_mean li").hover(
+                        function () {
+                            $(this).children("i").addClass("cur")
+                            // console.log($(this).children("i"));
+                        },
+                        function () {
+                            $(this).children("i").removeClass("cur")
+                        }
+                    );
+                    // 移入导航显示
+                    $(".topnav_mean i").hover(
+                        function () {
+                            $(this).parent().children("child").css("display", "block")
+
+                        },
+                        function () {
+                            $(this).parent().children("child").css("display", "block")
+
+                        }
+                    );
+
+
+                    // 头部导航hover颜色
+                    $(".topnav_mean i").hover(
+                        function () {
+                            $(this).parent().children('a').css("color", "#c2a680")
+                        },
+                        function () {
+                            $(this).parent().children('a').css("color", "")
+                        }
+                    );
+                    // 头部导航hover颜色
+                    $(".topnav_mean .child").hover(
+                        function () {
+                            $(this).parent().children('a').css("color", "#c2a680")
+                        },
+                        function () {
+                            $(this).parent().children('a').css("color", "")
+                        }
+                    );
+                </script>
+
+                <!-- 头部右边工具栏 -->
+                <div class="topnav-r clearfix">
+                    <ul class="tools">
+                        <li class="login">
+                            <a href="#"><img src="./img/ico_tools_search.png" alt="登录注册"></a>
+                            <div class="loginbox">
+                                <span class="a" onclick="window.location.href='./login.html'">登录</span>
+                                <span class="a" onclick="window.location.href='./signup.html'">注册</span>
+                            </div>
+                        </li>
+                        <li class="lang">
+                            <a href="#"><img src="./img/zhong1.png" alt="版本切换"></a>
+                            <div class="language">
+                                <span class="a">EN</span>
+                                <span class="a">青少版</span>
+                            </div>
+                        </li>
+
+                        <li class="scbtn">
+                            <a href="#" id="fdj"><img src="./img/ico_tools_user.png" alt="搜索"></a>
+                            <div class="search">
+                                <input type="text" class="keyword_search" value="搜索关键词..."
+                                    onfocus="if(this.value='搜索关键词...'){this.value=''}"
+                                    onblur="if(this.value==''){this.value='搜索关键词...'}">
+                                <!-- <input type="text" class="keyword_search" value="搜索关键词..."
+                                    onfocus="if(this.value=='搜索关键词...'){this.value=''}"
+                                    onblur="if(this.value=''){this.value='搜索关键词...'}"> -->
+                                <button class="ok"></button>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- 三横杠 -->
+                    <a href="#" class="menutool"><img src="./img/menu2-1.png" alt=""></a>
+                </div>
+                <script>
+                    // 点击搜索图标，显示和隐藏
+                    $("#fdj").click(function () {
+                        $(".search").toggle();
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 2. 浏览器路径 -->
+    <div class="win_path">
+        <!-- 2.1 版心 -->
+        <div class="container_subpage" style="z-index: 1;">
+            <!-- 2.2 路径 -->
+            <div class="path">
+                <a href="index.html">首页</a>»<a href="#">关于</a>»<a href="leader_list.html">领导</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<!-- 3. 领导团队 -->
+<div class="leader_team">
+    <div class="container_subpage">
+        <!-- 标题 -->
+        <div class="title">
+            <h2>
+                <i>
+                    <img src="./img/public-icon3.png" alt="">
+                </i>
+                <span>领导团队</span>
+                <i style="left: 1px;">
+                    <img src="./img/public-icon4.png" alt="">
+                </i>
+            </h2>
+            <h3>优秀专业的领导团队，引领更加专业的故宫</h3>
+        </div>
+        <!-- svg -->
+        <div class="t_head">
+            <a href="javascript:;" class="link" style="margin-top:-2px;">历任领导
+                <div id="line0" class="lines-btn"
+                    style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px;">
+                    <!-- SVG：lib -->
+                    <!-- SVG：lib -->
+                    <!-- SVG：lib -->
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="140" height="40"
+                        style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); left: 0px;">
+                        <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël</desc>
+                        <defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs>
+                        <path fill="none" stroke="#dcdcdc"
+                            d="M0,5L5,5L5,0L135,0L135,5L140,5L140,35L135,35L135,40L5,40L5,35L0,35L0,5" stroke-width="2"
+                            stroke-dasharray="1000,1000">
+                        </path>
+                    </svg>
+                </div>
+            </a>
+        </div>
+        <!-- 领导team介绍 -->
+        <!-- 领导team介绍 -->
+        <!-- 领导team介绍 -->
+        <div class="list">
+            <div class="item clearfix">
+                <div class="photo"><img src="./img/photo_team_1.jpg" alt="王旭东"></div>
+                <div class="info">
+                    <h1>王旭东<span>院长</span></h1>
+                    <div class="tet">
+                        <p>王旭东，男，汉族，1967年2月出生，甘肃山丹人，2003年4月加入中国共产党，1990年8月参加工作。2002年毕业于兰州大学资源与环境学院地质工程专业，研究生学历，工学博士，研究馆员。
+                        </p>
+                        <p>1991年6月到敦煌研究院工作，历任敦煌研究院保护研究所副所长，敦煌研究院院长助理，保护研究所所长。2005年1月任敦煌研究院副院长。2011年5月任敦煌研究院常务副院长、党委副书记。2013年11月任敦煌研究院党委书记、常务副院长。2014年12月任敦煌研究院院长、党委书记。2019年4月至今任文化和旅游部党组成员、故宫博物院院长（副部长级）。
+                        </p>
+                        <p>主要从事石窟、古代壁画和土遗址保护，文化遗产监测预警与预防性保护等方面的研究。1991年开始文物保护工作以来，主持完成全国重点文物保护单位保护维修工程60余项，承担国家及省部级课题近20项，主持或作为主要参与人完成与美国、日本、英国、澳大利亚等国相关文化遗产保护和管理机构开展的国际合作项目10余项，发表学术论文170余篇，第一作者出版《土遗址保护关键技术研究》《古代壁画规范研究》等专著6部，获国家或省部级科技奖励10多项，何梁何利奖科学与技术创新奖获得者，授权技术发明专利20余件，主持完成国家及行业技术标准5项，被授予“全国优秀科技工作者”“宣传文化系统拔尖创新人才”“甘肃省五一劳动奖章”“文化部优秀专家”“甘肃省优秀专家”“甘肃省先进工作者”等多项荣誉称号，入选国家百千万人才工程和甘肃省领军人才工程。中共第十九届中央委员会候补委员。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item clearfix">
+                <div class="photo"><img src="./img/photo_team_1.jpg" alt="王旭东"></div>
+                <div class="info">
+                    <h1>王旭东<span>院长</span></h1>
+                    <div class="tet">
+                        <p>王旭东，男，汉族，1967年2月出生，甘肃山丹人，2003年4月加入中国共产党，1990年8月参加工作。2002年毕业于兰州大学资源与环境学院地质工程专业，研究生学历，工学博士，研究馆员。
+                        </p>
+                        <p>1991年6月到敦煌研究院工作，历任敦煌研究院保护研究所副所长，敦煌研究院院长助理，保护研究所所长。2005年1月任敦煌研究院副院长。2011年5月任敦煌研究院常务副院长、党委副书记。2013年11月任敦煌研究院党委书记、常务副院长。2014年12月任敦煌研究院院长、党委书记。2019年4月至今任文化和旅游部党组成员、故宫博物院院长（副部长级）。
+                        </p>
+                        <p>主要从事石窟、古代壁画和土遗址保护，文化遗产监测预警与预防性保护等方面的研究。1991年开始文物保护工作以来，主持完成全国重点文物保护单位保护维修工程60余项，承担国家及省部级课题近20项，主持或作为主要参与人完成与美国、日本、英国、澳大利亚等国相关文化遗产保护和管理机构开展的国际合作项目10余项，发表学术论文170余篇，第一作者出版《土遗址保护关键技术研究》《古代壁画规范研究》等专著6部，获国家或省部级科技奖励10多项，何梁何利奖科学与技术创新奖获得者，授权技术发明专利20余件，主持完成国家及行业技术标准5项，被授予“全国优秀科技工作者”“宣传文化系统拔尖创新人才”“甘肃省五一劳动奖章”“文化部优秀专家”“甘肃省优秀专家”“甘肃省先进工作者”等多项荣誉称号，入选国家百千万人才工程和甘肃省领军人才工程。中共第十九届中央委员会候补委员。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item clearfix">
+                <div class="photo"><img src="./img/photo_team_1.jpg" alt="王旭东"></div>
+                <div class="info">
+                    <h1>王旭东<span>院长</span></h1>
+                    <div class="tet">
+                        <p>王旭东，男，汉族，1967年2月出生，甘肃山丹人，2003年4月加入中国共产党，1990年8月参加工作。2002年毕业于兰州大学资源与环境学院地质工程专业，研究生学历，工学博士，研究馆员。
+                        </p>
+                        <p>1991年6月到敦煌研究院工作，历任敦煌研究院保护研究所副所长，敦煌研究院院长助理，保护研究所所长。2005年1月任敦煌研究院副院长。2011年5月任敦煌研究院常务副院长、党委副书记。2013年11月任敦煌研究院党委书记、常务副院长。2014年12月任敦煌研究院院长、党委书记。2019年4月至今任文化和旅游部党组成员、故宫博物院院长（副部长级）。
+                        </p>
+                        <p>主要从事石窟、古代壁画和土遗址保护，文化遗产监测预警与预防性保护等方面的研究。1991年开始文物保护工作以来，主持完成全国重点文物保护单位保护维修工程60余项，承担国家及省部级课题近20项，主持或作为主要参与人完成与美国、日本、英国、澳大利亚等国相关文化遗产保护和管理机构开展的国际合作项目10余项，发表学术论文170余篇，第一作者出版《土遗址保护关键技术研究》《古代壁画规范研究》等专著6部，获国家或省部级科技奖励10多项，何梁何利奖科学与技术创新奖获得者，授权技术发明专利20余件，主持完成国家及行业技术标准5项，被授予“全国优秀科技工作者”“宣传文化系统拔尖创新人才”“甘肃省五一劳动奖章”“文化部优秀专家”“甘肃省优秀专家”“甘肃省先进工作者”等多项荣誉称号，入选国家百千万人才工程和甘肃省领军人才工程。中共第十九届中央委员会候补委员。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
+
+
+<!-- 4. 主体底部导航 -->
+<!-- <div class="footer_nav">
+    <div class="container_subpage clearfix">
+        <a href="javascript:;"><img src="./img/home_block4_1.png" alt=""><span>总说</span></a>
+        <a href="javascript:;"><img src="./img/home_block4_2.png" alt=""><span>资讯</span></a>
+        <a href="javascript:;"><img src="./img/home_block4_3.png" alt=""><span>景仁榜</span></a>
+        <a href="javascript:;"><img src="./img/home_block4_4.png" alt=""><span>院史编年</span></a>
+    </div>
+</div> -->
+
+
+
+<!-- 5. 底部 -->
+<!-- <div class="bottom"> -->
+<!-- 5.1 版心 -->
+<!-- <div class="container clearfix"> -->
+<!-- 5.1.1 网站访问量-->
+<!-- <div class="num">网站访问量<span><i>7</i><i>4</i><i>6</i><i>6</i><i>6</i><i>6</i></i><i>6</i><i>6</i></span></div> -->
+<!-- 5.1.2 底部导航-->
+<!-- <div class="bottom_nav"> -->
+<!-- <a href="#">网站地图</a>&nbsp;&nbsp; -->
+<!-- <a href="#">相关链接</a>&nbsp;&nbsp; -->
+<!-- <a href="#">影像授权</a>&nbsp;&nbsp; -->
+<!-- <a href="#">隐私政策</a>&nbsp;&nbsp; -->
+<!-- <a href="#">版权声明</a>&nbsp;&nbsp; -->
+<!-- <a href="#">常见问题</a>&nbsp;&nbsp; -->
+<!-- <a href="#">联系我们</a>&nbsp;&nbsp; -->
+<!-- <a href="#">关于我们</a>&nbsp;&nbsp; -->
+<!-- </div> -->
+<!-- 5.1.3 版权 -->
+<!-- <div class="copyright"> -->
+<!-- &copy; 2001- 现在 故宫博物院 &nbsp;&nbsp;　京ICP备05067311号-1 &nbsp;&nbsp;&nbsp; -->
+<!-- <a href="#">网站建设</a>： -->
+<!-- <a href="#">北京分形科技</a> -->
+<!-- </div> -->
+<!-- 5.1.4 浏览建议-->
+<!-- <div class="btns"> -->
+<!-- <a>浏览建议</a> -->
+<!-- </div> -->
+<!-- 5.1.5 二维码-->
+<!-- <div class="qr_code"> -->
+<!-- <a><img src="./img/ico_hand.png" alt="二维码"></a> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- </div> -->
+</body>
+
+</html>

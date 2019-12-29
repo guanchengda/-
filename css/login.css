@@ -464,7 +464,9 @@ body {
     margin-left: 0;
 }
 
-win_path .path {}
+.win_path .path {
+    line-height: 50px;
+}
 
 
 /* 3. 登录会员账号 */
@@ -497,7 +499,7 @@ win_path .path {}
 .login_zh .tit-span {
     display: inline-block;
     vertical-align: middle;
-    margin: 0 10px;
+    margin: 0 2px;
     line-height: 1;
 }
 
@@ -587,6 +589,39 @@ win_path .path {}
     color: #fff;
 }
 
+
+/* SVG：登录 */
+.link {
+    position: relative;
+    width: 158px;
+    height: 40px;
+    text-align: center;
+    margin: 54px 0 0 66px;
+    float: left;
+    color: #fff;
+    font-size: 16px;
+    line-height: 40px;
+}
+
+path {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    stroke-width: 2;
+    stroke-dashoffset: 0px;
+    stroke-dasharray: 500, 500;
+    transition: all 1s;
+}
+
+.link:hover path {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    stroke-width: 2;
+    stroke-dashoffset: -1000px;
+    stroke-dasharray: 500, 500;
+    transition: stroke-dashoffset 500ms 2 ease 0s，stroke-dasharray 500ms ease 0s;
+}
+
+.link:hover {
+    color: #fff;
+}
 
 
 /* 4. 底部 */
