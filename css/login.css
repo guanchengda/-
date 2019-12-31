@@ -114,7 +114,7 @@ body {
     text-align: left;
     line-height: 50px;
     overflow: hidden;
-    background: url(../img/black61.png);
+    background: url(../image/black61.png);
     /* background-color: rgb(157, 131, 94, 0.71); */
     /* 过渡 */
     /* transform: scale(1.001, 1.001);
@@ -138,7 +138,7 @@ body {
 
 .topnav_mean .child strong {
     color: #fff;
-    background: url(../img/img6.png) right 3px no-repeat;
+    background: url(../image/img6.png) right 3px no-repeat;
     padding-right: 15px;
     margin-right: 8px;
 }
@@ -358,7 +358,7 @@ body {
 
 /* 工具栏隐藏栏 */
 .topnav-r .tools .loginbox {
-    background: url(../img/login-box1.png) no-repeat 0 bottom;
+    background: url(../image/login-box1.png) no-repeat 0 bottom;
     width: 80px;
     height: 70px;
     position: absolute;
@@ -374,7 +374,7 @@ body {
 
 
 .topnav-r .tools .language {
-    background: url(../img/login-box1.png) no-repeat 0 bottom;
+    background: url(../image/login-box1.png) no-repeat 0 bottom;
     width: 80px;
     height: 70px;
     position: absolute;
@@ -409,7 +409,7 @@ body {
 
 /* 搜索框 */
 .topnav-r .tools .search {
-    background: url(../img/search1.png) no-repeat center bottom;
+    background: url(../image/search1.png) no-repeat center bottom;
     width: 280px;
     height: 80px;
     padding-top: 40px;
@@ -473,7 +473,7 @@ body {
 #login-form {}
 
 .login_zh {
-    background: url(../img/bg17.jpg) center top no-repeat;
+    background: url(../image/bg17.jpg) center top no-repeat;
     height: 645px;
     margin: 20px 0 45px;
 }
@@ -523,7 +523,7 @@ body {
 
 /* 输入框、、 */
 .login_zh .box .input {
-    background: url(../img/input1.png) left center no-repeat;
+    background: url(../image/input1.png) left center no-repeat;
     width: 385px;
     height: 40px;
     margin-top: 12px;
@@ -542,7 +542,7 @@ body {
 }
 
 .login_zh .box .input.yz {
-    background: url(../img/input2.png) left center no-repeat;
+    background: url(../image/input2.png) left center no-repeat;
 }
 
 .login_zh .box .input.yz input {
@@ -552,7 +552,7 @@ body {
 
 .login_zh .box .input.yz a {
     display: block;
-    background: url(../img/yzm.png) no-repeat center;
+    background: url(../image/yzm.png) no-repeat center;
     background-size: 90px 40px;
     width: 90px;
     height: 40px;
@@ -708,7 +708,7 @@ path {
 
 .qr_code a::after {
     content: "";
-    background: url(../img/ico_hand2.png) no-repeat;
+    background: url(../image/ico_hand2.png) no-repeat;
     width: 26px;
     height: 26px;
     position: absolute;
@@ -776,7 +776,7 @@ path {
 
 .qr_code a::before {
     content: "";
-    background: url(../img/QR_code.jpg) no-repeat top;
+    background: url(../image/QR_code.jpg) no-repeat top;
     width: 282px;
     height: 448px;
     position: absolute;

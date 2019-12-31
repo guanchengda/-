@@ -81,7 +81,7 @@ body {
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
-  background: url('../img/dian2.png') no-repeat left center;
+  background: url('../image/dian2.png') no-repeat left center;
 }
 
 .focus .nav i.now {
@@ -113,7 +113,7 @@ body {
   margin-top: -40px;
   width: 80px;
   height: 80px;
-  background: url("../img/ld_prev.png") no-repeat center;
+  background: url("../image/ld_prev.png") no-repeat center;
   opacity: 0;
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
@@ -127,7 +127,7 @@ body {
   margin-top: -40px;
   width: 80px;
   height: 80px;
-  background: url("../img/ld_next.png") no-repeat center;
+  background: url("../image/ld_next.png") no-repeat center;
   opacity: 0;
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
@@ -232,7 +232,7 @@ body {
   text-align: left;
   line-height: 50px;
   overflow: hidden;
-  background: url(../img/black60.png);
+  background: url(../image/black60.png);
   /* background-color: rgb(157, 131, 94, 0.71); */
   /* 过渡 */
   /* transform: scale(1.001, 1.001);
@@ -255,7 +255,7 @@ body {
 
 .topnav_mean .child strong {
   color: #fff;
-  background: url(../img/img6.png) right 5px no-repeat;
+  background: url(../image/img6.png) right 5px no-repeat;
   padding-right: 15px;
   margin-right: 8px;
 }
@@ -479,7 +479,7 @@ body {
 
 /* 工具栏隐藏栏 */
 .topnav-r .tools .loginbox {
-  background: url(../img/login-box.png) no-repeat 0 bottom;
+  background: url(../image/login-box.png) no-repeat 0 bottom;
 
   width: 80px;
   height: 70px;
@@ -494,7 +494,7 @@ body {
 
 
 .topnav-r .tools .language {
-  background: url(../img/login-box.png) no-repeat 0 bottom;
+  background: url(../image/login-box.png) no-repeat 0 bottom;
   width: 80px;
   height: 70px;
   position: absolute;
@@ -527,7 +527,7 @@ body {
 
 /* 搜索框 */
 .topnav-r .tools .search {
-  background: url(../img/search.png) no-repeat center bottom;
+  background: url(../image/search.png) no-repeat center bottom;
   width: 280px;
   height: 80px;
   padding-top: 40px;
@@ -587,7 +587,7 @@ body {
 .main_content .palace_information .box1 {
   width: 928px;
   height: 455px;
-  background: url(../img/home_block1_news_bg.jpg);
+  background: url(../image/home_block1_news_bg.jpg);
 
   transform: translateY(0);
   -webkit-transform: translateY(0);
@@ -681,7 +681,7 @@ body {
   left: 0;
   width: 48px;
   height: 100%;
-  background: url(../img/more.png) no-repeat;
+  background: url(../image/more.png) no-repeat;
 }
 
 .main_content .more:hover i {
@@ -715,7 +715,7 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   /* 列表图 */
-  background: url(../img/index-icon2-1.png) no-repeat left center;
+  background: url(../image/index-icon2-1.png) no-repeat left center;
   background-size: 17px 14px;
 }
 
@@ -723,7 +723,7 @@ body {
 .news .list2 {
   margin-left: 3%;
   overflow: hidden;
-  background: url(../img/index-icon3.png) repeat-x;
+  background: url(../image/index-icon3.png) repeat-x;
   padding-top: 9px;
 }
 
@@ -805,7 +805,7 @@ body {
 
 .palace_information .box2 .bg {
   height: 451px;
-  background: url(../img/home_block1_box2_bg.jpg) no-repeat center;
+  background: url(../image/home_block1_box2_bg.jpg) no-repeat center;
   position: relative;
 }
 
@@ -852,21 +852,21 @@ body {
 
 /* 在线预约订票 */
 .box3 .tkt {
-  background: url(../img/home_block1_box3_bg1.jpg);
+  background: url(../image/home_block1_box3_bg1.jpg);
   position: relative;
   overflow: hidden;
 }
 
 /* 全景虚拟游览 */
 .box3 .stsg {
-  background: url(../img/home_block1_box3_bg2.jpg);
+  background: url(../image/home_block1_box3_bg2.jpg);
   position: relative;
   overflow: hidden;
 }
 
 /* 博物馆活动 */
 .box3 .aty {
-  background: url(../img/home_block1_box3_bg3.jpg);
+  background: url(../image/home_block1_box3_bg3.jpg);
   position: relative;
   overflow: hidden;
 }
@@ -933,7 +933,7 @@ body {
 
 /* 盒子4 */
 .palace_information .box4 {
-  background: url(../img/home_block1_box4_bg.jpg);
+  background: url(../image/home_block1_box4_bg.jpg);
   margin-top: 30px;
   color: #fff;
   /* box4整块高度方法一： */
@@ -975,7 +975,7 @@ body {
   font-size: 38px;
   margin-bottom: 10px;
   padding-right: 30px;
-  background: url(../img/huiwen2.png) no-repeat right;
+  background: url(../image/huiwen2.png) no-repeat right;
 }
 
 .item1 .list li:nth-last-child(1)>h1 {
@@ -1002,7 +1002,7 @@ body {
   margin-right: 15px;
   padding-right: 20px;
   display: inline-block;
-  background: url(../img/wxx_shuxina.png) no-repeat right center;
+  background: url(../image/wxx_shuxina.png) no-repeat right center;
 }
 
 
@@ -1038,7 +1038,7 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   /* 列表图 */
-  background: url(../img/index-icon2-1.png) no-repeat left center;
+  background: url(../image/index-icon2-1.png) no-repeat left center;
   background-size: 17px 14px;
 }
 
@@ -1102,7 +1102,7 @@ body {
   float: left;
   width: 384px;
   height: 464px;
-  background: url(../img/home_block2_box_bg1920.jpg) no-repeat;
+  background: url(../image/home_block2_box_bg1920.jpg) no-repeat;
   margin-right: 30px;
 }
 
@@ -1147,7 +1147,7 @@ body {
   float: right;
   width: 58px;
   height: 58px;
-  background: url(../img/jian.png) no-repeat center 5px;
+  background: url(../image/jian.png) no-repeat center 5px;
   text-align: center;
   line-height: 60px;
 }
@@ -1169,7 +1169,7 @@ body {
 .data_list .query {
   display: block;
   height: 47px;
-  background: url(../img/png10.png) no-repeat center;
+  background: url(../image/png10.png) no-repeat center;
   text-align: center;
   line-height: 44px;
   margin-top: 12px;
@@ -1262,7 +1262,7 @@ path {
 .mask {
   position: absolute;
   z-index: 11;
-  background: url(../img/opacity-75.png);
+  background: url(../image/opacity-75.png);
   width: 100%;
   height: 100%;
   left: -100%;
@@ -1291,7 +1291,7 @@ path {
 
 .museum_activity .activity {
   display: inline-block;
-  background: url(../img/home_block3_box_bg.jpg) no-repeat center;
+  background: url(../image/home_block3_box_bg.jpg) no-repeat center;
   width: 1112px;
   height: 100%;
   vertical-align: top;
@@ -1337,7 +1337,7 @@ path {
 }
 
 .act_message li h2 {
-  background: url(../img/liststyle.png) no-repeat left center;
+  background: url(../image/liststyle.png) no-repeat left center;
   padding-left: 22px;
   font-size: 20px;
   margin-bottom: 14px;
@@ -1400,23 +1400,23 @@ path {
 }
 
 .footer_nav .li1 {
-  background: url(../img/footer_nav_1.jpg) no-repeat;
+  background: url(../image/footer_nav_1.jpg) no-repeat;
 }
 
 .footer_nav .li2 {
-  background: url(../img/footer_nav_2.jpg) no-repeat;
+  background: url(../image/footer_nav_2.jpg) no-repeat;
 }
 
 .footer_nav .li3 {
-  background: url(../img/footer_nav_3.jpg) no-repeat;
+  background: url(../image/footer_nav_3.jpg) no-repeat;
 }
 
 .footer_nav .li4 {
-  background: url(../img/footer_nav_2.jpg) no-repeat;
+  background: url(../image/footer_nav_2.jpg) no-repeat;
 }
 
 .footer_nav .li5 {
-  background: url(../img/footer_nav_3.jpg) no-repeat;
+  background: url(../image/footer_nav_3.jpg) no-repeat;
 }
 
 .footer_nav li img {
@@ -1453,7 +1453,7 @@ path {
 .content {
   position: absolute;
   z-index: 2;
-  background: url(../img/home_block4_bg2.jpg);
+  background: url(../image/home_block4_bg2.jpg);
   width: 100%;
   height: 100%;
   left: -100%;
@@ -1559,7 +1559,7 @@ path {
 
 .qr_code a::after {
   content: "";
-  background: url(../img/ico_hand2.png) no-repeat;
+  background: url(../image/ico_hand2.png) no-repeat;
   width: 26px;
   height: 26px;
   position: absolute;
@@ -1627,7 +1627,7 @@ path {
 
 .qr_code a::before {
   content: "";
-  background: url(../img/QR_code.jpg) no-repeat top;
+  background: url(../image/QR_code.jpg) no-repeat top;
   width: 282px;
   height: 448px;
   position: absolute;
@@ -1664,7 +1664,7 @@ path {
 .fix_nav .nav li {
   width: 42px;
   height: 42px;
-  background: url(../img/sidebar_bg.png);
+  background: url(../image/sidebar_bg.png);
   margin: 1px 0;
   text-align: center;
   position: relative;
@@ -1738,17 +1738,17 @@ path {
 /* 缩小 */
 
 .fix_nav .close {
-  background: url(../img/sidebar_close.png) no-repeat;
+  background: url(../image/sidebar_close.png) no-repeat;
   min-width: 42px;
   height: 42px;
 }
 
 .fix_nav .close.up {
-  background: url(../img/sidebar_up.png) no-repeat;
+  background: url(../image/sidebar_up.png) no-repeat;
 }
 
 .fix_nav p {
-  background: url(../img/sidebar_up.png) no-repeat;
+  background: url(../image/sidebar_up.png) no-repeat;
   min-width: 42px;
   height: 42px;
 }

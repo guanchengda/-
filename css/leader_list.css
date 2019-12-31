@@ -3,7 +3,7 @@
 }
 
 body {
-    height: 1333px;
+    /* height: 1333px; */
     color: #707070;
     font-family: 微软雅黑, 'Heiti SC', 黑体, Arial;
     font-size: 14px;
@@ -114,7 +114,7 @@ body {
     text-align: left;
     line-height: 50px;
     overflow: hidden;
-    background: url(../img/black61.png);
+    background: url(../image/black61.png);
     /* background-color: rgb(157, 131, 94, 0.71); */
     /* 过渡 */
     /* transform: scale(1.001, 1.001);
@@ -138,7 +138,7 @@ body {
 
 .topnav_mean .child strong {
     color: #fff;
-    background: url(../img/img6.png) right 3px no-repeat;
+    background: url(../image/img6.png) right 3px no-repeat;
     padding-right: 15px;
     margin-right: 8px;
 }
@@ -358,7 +358,7 @@ body {
 
 /* 工具栏隐藏栏 */
 .topnav-r .tools .loginbox {
-    background: url(../img/login-box1.png) no-repeat 0 bottom;
+    background: url(../image/login-box1.png) no-repeat 0 bottom;
     width: 80px;
     height: 70px;
     position: absolute;
@@ -374,7 +374,7 @@ body {
 
 
 .topnav-r .tools .language {
-    background: url(../img/login-box1.png) no-repeat 0 bottom;
+    background: url(../image/login-box1.png) no-repeat 0 bottom;
     width: 80px;
     height: 70px;
     position: absolute;
@@ -409,7 +409,7 @@ body {
 
 /* 搜索框 */
 .topnav-r .tools .search {
-    background: url(../img/search1.png) no-repeat center bottom;
+    background: url(../image/search1.png) no-repeat center bottom;
     width: 280px;
     height: 80px;
     padding-top: 40px;
@@ -571,35 +571,80 @@ path {
     text-align: justify;
     font-size: 26px;
     color: #474747;
+    padding-top: 6px;
 }
 
 .list .info span {
     font-size: 18px;
-
+    padding-left: 20px;
 }
 
-.list .tet {}
+.list .tet {
+    padding-top: 23px;
+    padding-right: 35px;
+    line-height: 1.5;
+}
 
-.list .tet p {}
+.list .tet p {
+    color: #474747;
+    text-indent: 2em;
+    font-size: 14px;
+    text-align: justify;
+}
 
+.list .item:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 6px;
+    padding: 45px 0 43px;
+    background: url(../image/line1.png) center no-repeat;
+    clear: both;
+}
 
+/* 著作 */
+.info .zz {
+    display: inline-block;
+    margin-top: 49px;
+    min-width: 120px;
+    text-align: center;
+    height: 37px;
+    line-height: 37px;
+    padding: 0 20px;
+    background: url(../image/btn1.png) no-repeat center center;
+    color: #474747;
+    position: relative;
+    z-index: 1;
+}
 
+.info .zz::before {
+    content: "";
+    width: 6px;
+    height: 100%;
+    background: url(../image/btn1.png) no-repeat left center;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
 
+.info b.book {
+    display: inline-block;
+    width: 26px;
+    height: 20px;
+    background: url(../image/ico_book.png) no-repeat center top;
+    vertical-align: text-top;
+    margin-right: 5px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.info .zz::after {
+    content: "";
+    width: 6px;
+    height: 100%;
+    background: url(../image/btn1.png) no-repeat right center;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
 
 
 
@@ -608,6 +653,7 @@ path {
 .footer_nav {
     text-align: center;
     padding-bottom: 15px;
+    margin-top: -5.5px;
 }
 
 .footer_nav a {
@@ -618,19 +664,19 @@ path {
 }
 
 .footer_nav a:nth-child(1) {
-    background: url(../img/home_block4_bg1.jpg);
+    background: url(../image/home_block4_bg1.jpg);
 }
 
 .footer_nav a:nth-child(2) {
-    background: url(../img/home_block4_bg2.jpg);
+    background: url(../image/home_block4_bg2.jpg);
 }
 
 .footer_nav a:nth-child(3) {
-    background: url(../img/home_block4_bg3.jpg);
+    background: url(../image/home_block4_bg3.jpg);
 }
 
 .footer_nav a:nth-child(4) {
-    background: url(../img/home_block4_bg4.jpg);
+    background: url(../image/home_block4_bg4.jpg);
 }
 
 .footer_nav a img {
@@ -743,7 +789,7 @@ path {
 
 .qr_code a::after {
     content: "";
-    background: url(../img/ico_hand2.png) no-repeat;
+    background: url(../image/ico_hand2.png) no-repeat;
     width: 26px;
     height: 26px;
     position: absolute;
@@ -811,7 +857,7 @@ path {
 
 .qr_code a::before {
     content: "";
-    background: url(../img/QR_code.jpg) no-repeat top;
+    background: url(../image/QR_code.jpg) no-repeat top;
     width: 282px;
     height: 448px;
     position: absolute;
