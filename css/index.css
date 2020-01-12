@@ -1735,8 +1735,8 @@ path {
   display: block;
 }
 
-/* 缩小 */
 
+/* 缩小 */
 .fix_nav .close {
   background: url(../image/sidebar_close.png) no-repeat;
   min-width: 42px;

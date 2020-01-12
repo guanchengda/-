@@ -751,9 +751,7 @@ path {
     text-align: center;
 }
 
-.bottom_nav a {
-    /* padding: 0 6px; */
-}
+.bottom_nav a {}
 
 /* 5.1.3 版权 */
 .copyright {
